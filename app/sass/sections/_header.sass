@@ -1,0 +1,372 @@
+.header
+	position: relative
+	min-height: 660px
+	height: 100vh
+	background-color: #fff
+	background-image: url(../img/header-left.png)
+	background-repeat: no-repeat
+
+.header-top
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding-top: 10px
+
+
+.logo
+	width: 70px
+	height: 70px
+	overflow: hidden
+	border-radius: 50%
+	background-color: #fff
+	text-align: center
+	>img
+		max-width: 100%
+		margin-top: 8px
+
+.country
+	position: relative
+	z-index: 2
+	background-color: #333
+	color: #fff
+	font-size: 12px
+	border-radius: 20px
+	padding: 0 36px 0 15px
+	height: 24px
+	>p
+		margin: 0
+		line-height: 24px
+	.country__img	
+		top: 0
+		right: 0
+		position: absolute
+		border-radius: 50%
+		overflow: hidden
+		width: 24px
+		height: 24px
+		border: 1px solid #353633
+
+.col-wrap
+	display: flex
+	flex-wrap: wrap
+	.col-50
+		flex: 1 1 50%
+
+.col-left
+	max-width: 380px
+	z-index: 2
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+
+.col-right
+	position: absolute
+	top: 0
+	left: 50%
+	width: 50%
+	background: linear-gradient(45deg, #882b8e, #84c835)
+	// background-image: url(../img/header-right.png)
+	background-size: cover
+	background-position: bottom left
+	height: 100%
+	&::after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-image: url(../img/header-right-after.png)
+		background-repeat: repeat
+		background-size: contain
+		z-index: 2
+	&::before
+		position: absolute
+		content: ""
+		bottom: 0
+		left: 0
+		max-width: 100%
+		width: 100%
+		height: 600px
+		background-image: url(../img/header-bottom.png)
+		background-size: cover
+		background-repeat: no-repeat
+		z-index: 1
+
+.header__head
+	text-transform: uppercase
+	font-size: 60px
+	line-height: 1
+	margin-top: 0
+
+.header__desc	
+	font-family: "RobotoRegular", sans-serif
+	font-weight: 300
+	font-size: 28px
+	line-height: 1
+	margin-top: 0
+	margin-bottom: 40px
+
+.header-items
+	font-family: "RobotoRegular", sans-serif
+	font-weight: 300
+	font-size: 18px
+	.header-items__item
+		margin-bottom: 10px
+		padding-left: 30px
+		position: relative
+		>i
+			position: absolute
+			color: #fff
+			line-height: 18px
+			text-align: center
+			font-size: 12px
+			top: 8px
+			left: 0
+			background-color: #87ae52
+			width: 18px
+			height: 18px
+			border-radius: 50%
+
+.callback
+	position: absolute
+	top: 50%
+	transform: translate(50%, -50%)
+	background-color: #fff
+	padding: 30px
+	border-radius: 3px
+	max-width: 330px
+	z-index: 10
+	i 
+		font-size: 23px
+	.callback__date
+		border: 1px solid #68952e
+		color: #68952e
+		border-radius: 5px
+		text-align: center
+		font-weight: 700
+		background-color: #f0f4ea
+		margin-bottom: 15px
+		>p
+			margin: 7px
+	.callback__price
+		display: flex
+		justify-content: space-between
+		font-family: "Open Sans", sans-serif
+		margin-bottom: 20px
+		.price-left
+			margin: 0
+			font-weight: 700
+			text-transform: uppercase
+		.price-right
+			text-align: right
+			text-transform: uppercase
+			.price__new
+				font-weight: 700
+				font-size: 72px
+				line-height: 1
+				margin: 0
+				color: #68952e
+			.price__currency
+				margin: 0
+	.callback__input
+		margin-bottom: 30px
+		font-family: "Open Sans", sans-serif
+		.callback__input-tel, .callback__input-name
+			position: relative
+			border-radius: 3px
+			overflow: hidden
+			text-align: center
+			line-height: 42px
+			height: 48px
+			color: #fff
+			// transition: opacity 0.3s ease
+			opacity: 0.25
+			&.callback__input-name
+				margin-bottom: 15px
+				box-shadow: 0px 0px 0px 1px #595f6f
+				span
+					background-color: #595f6f
+			&.callback__input-tel
+				box-shadow: 0px 0px 0px 1px #ed145b
+				span
+					background-color: #ed145b
+			&:hover
+				opacity: 0.7
+		span
+			position: absolute
+			width: 50px
+			height: 48px
+			line-height: 48px
+			top: 0
+			left: 0
+		input
+			width: 100%
+			padding-left: 70px
+			padding-right: 5px
+			height: 100%
+			outline: none
+			border: none
+	.callback__desc
+		font-size: 12px
+		font-weight: 300
+		text-align: center
+		margin-top: 15px
+	.btn
+		width: 100%
+
+
+.header-center
+	position: absolute
+	width: 700px
+	text-align: center
+	top: 50%
+	left: 10px
+	transform: translate(-50%, -50%)
+	z-index: 8
+	img
+		max-width: 100%
+	.open-form
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 32px
+		height: 32px
+		line-height: 32px
+		background-color: rgba(#fff, 0.85)
+		border-radius: 50%
+		box-shadow: 0 10px 20px 0 rgba(#000, .5)
+		cursor: pointer
+		transition: box-shadow 0.3s ease
+		&:hover
+			box-shadow: none
+	&::before
+		position: absolute
+		content: ""
+		bottom: -122px
+		left: 156px
+		background-image: url(../img/shadow.png)
+		width: 100%
+		height: 200px
+		background-repeat: no-repeat
+
+.header-bottom
+	position: absolute
+	bottom: 0
+	left: 50%
+	width: 170px
+	height: 40px
+	line-height: 40px
+	text-align: center
+	transform: translateX(-50%)
+	background-image: url(../img/header-btn.png)
+	background-repeat: no-repeat
+	background-position: top center
+	display: block
+	cursor: pointer
+	z-index: 12
+	>i
+		transition: transform 0.2s ease
+		font-size: 14px
+		margin-top: 8px
+	&:hover
+		>i
+			transform: translateY(3px)
+
+
+.header-message
+	position: absolute
+	bottom: 30px
+	right: 30px
+	background-color: #fff
+	padding: 12px
+	max-width: 345px
+	z-index: 11
+	font-size: 12px
+	box-shadow: 0 15px 25px 0 rgba(#000, .15)
+	p
+		margin-top: 0
+		margin-bottom: 5px
+		line-height: 1.3
+		font-weight: 300
+	.header-message_wrap
+		display: flex
+		justify-content: space-between
+		.col
+			&:nth-child(2)
+				color: #ff0000
+			&:nth-child(3)
+				color: #68952e
+	.header-message-close
+		position: absolute
+		top: 4px
+		right: 10px
+		opacity: 0
+		cursor: pointer
+		transition: opacity 0.3s ease
+	&::before
+		content: ""
+		position: absolute
+		right: 0
+		bottom: -10px
+		border: 6px solid transparent
+		border-top: 6px solid #fff
+		border-right: 6px solid #fff
+		z-index: 11
+	&:hover
+		.header-message-close
+			opacity: 1
+
+@media only screen and (max-width : 1370px)
+	.header__head 
+		font-size: 50px
+	.header__desc
+		margin-bottom: 20px
+	.header-items
+		.header-items__item
+			margin-bottom: 5px
+
+@media only screen and (max-width : 1200px)
+	.header
+		min-height: 770px
+	.header-top
+		padding-left: 15px
+		padding-right: 15px
+
+@media only screen and (max-width : 1000px)
+	.header
+		min-height: auto
+		height: auto
+	.col-wrap .col-50
+		flex: 1 1 100%
+	.col-left
+		max-width: 100%
+		top: 10px
+		transform: translate(0,0)
+		position: relative
+		padding: 20px 15px 50px 15px
+	.col-right
+		left: 0
+		padding: 0 15px 40px 15px
+		position: relative
+	.header-message
+		display: none
+	.header-center
+		position: relative
+		margin: 30px auto
+		top: 0
+		left: 0
+		transform: translate(0,0)
+		max-width: 700px
+		width: 100%
+		&::before
+			display: none
+	.callback
+		position: relative
+		left: 0
+		top: 0
+		transform: translate(0,0)
+		margin: 30px auto
+	.header-bottom
+		bottom: 0	

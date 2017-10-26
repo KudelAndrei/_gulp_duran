@@ -1,0 +1,426 @@
+doctype html
+html(lang='ru')
+
+	head
+		meta(charset='utf-8')
+
+		title Duran's
+		meta(name='description', content='')
+		meta(name='keywords', content='')
+
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		meta(property='og:image', content='path/to/image.jpg')
+
+		link(rel='shortcut icon', href='img/favicon/favicon.gif', type='image/x-icon')
+
+		// Load CSS Compiled without JS
+		link(rel='stylesheet', href='css/main.min.css')
+
+	body
+		header.header
+			.container-full
+				.header-top
+					.logo
+						img(src="./img/logo.png", alt="duran")
+					.country
+						p Теперь в <strong>Беларуси!</strong>
+						.country__img
+							img(src="./img/by.png", alt="belarus")
+				.row
+					.col-wrap
+						.col-50.col-left
+							h1.header__head
+								| Зеленый Коктейль Дюкана!
+							p.header__desc
+								| Экспресс-метод похудения от самого известного диетолога в мире!
+							ul.header-items
+								li.header-items__item <i class="fa fa-check" aria-hidden="true"></i> <strong>Эффективный</strong> снижение веса 
+								li.header-items__item <i class="fa fa-check" aria-hidden="true"></i> <strong>Одна порция</strong> коктейля Дюкана = <strong>один полноценный прием пищи </strong>
+								li.header-items__item <i class="fa fa-check" aria-hidden="true"></i> Регуляция процесса <strong>сжигания жировых клеток</strong> в организме 
+								li.header-items__item <i class="fa fa-check" aria-hidden="true"></i> <strong>Очистка</strong> кишечника от 2-3 килограмм шлаков <strong/>на первой неделе приема</strong>
+								li.header-items__item <i class="fa fa-check" aria-hidden="true"></i> Гарантированное избавление <strong>от 7-12 килограмм за месяц!</strong>
+								
+						.col-50.col-right
+							.header-center
+								img(src="./img/banka-min.png", alt="duran")
+								a.open-form <i class="fa fa-search" aria-hidden="true"></i>	
+							form.callback
+								.callback__date
+									p До 
+										span 03.10.17
+										| скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i>
+								.callback__price
+									.price-left
+										| Цена:
+									.price-right
+										strike.price__old 1980
+										p.price__new 990
+										p.price__currency бел. руб.
+								.callback__input
+									.callback__input-name
+										input(placeholder="Ваше имя")
+										span <i class="fa fa-user" aria-hidden="true"></i>
+									.callback__input-tel
+										input(placeholder="Ваш номер телефона")
+										span <i class="fa fa-phone" aria-hidden="true"></i>
+								button.btn(type="sybmit") 
+									span Оформить заказ
+									<i class="fa fa-paper-plane" aria-hidden="true"></i>
+								.callback__desc
+									span * Закажи прямо сейчас и получи подарок!	
+			.header-message
+				p «Я НЕ УМЕЮ ХУДЕТЬ, НО С КОКТЕЙЛЕМ ДЮКАНА ПОЛУЧИЛОСЬ!»
+				.header-message-close X
+				.header-message_wrap
+					.col
+						strong Виктория, 
+						| 44 года
+					.col
+						| Вес до: 137 кг.
+					.col
+						| Вес после: 78 кг.
+			a.header-bottom 
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+		section.section.section-1
+			h2 Стройность в наше время 
+				strong ЭТО ЛЕГКО!
+			h3.section-1__desc <strong>В 2017 году</strong> лишний вес легко контролировать, <br> но к сожалению, не все об этом знают!
+			p.section-1__text Опытные диетологи и нутрициологи собрались в лабораториях Пьера Дюкана для того, чтобы разработать <strong>уникальный коктейль, помогающий</strong> сотням женщин и мужчин по всему миру эффективно и быстро сбрасывать лишний вес.
+			p.section-1__text
+				strong На базе лаборатории Пьера Дюкана были созданы две уникальные формулы: <span class="green">SeaSlim™</span> и <span class="purple">ReduLight™</span>, позволяющие управлять теми калориями, которые вы не успеваете сжигать за день.
+			.section-1__tree 
+				.section-1__tree-col
+					.section-1__tree-item 
+						h4 Хлорелла
+						a(href="#") подробнее
+					.section-1__tree-item 
+						h4 Чарпа имбирия
+						a(href="#") подробнее
+				.section-1__tree-col
+					.section-1__tree-item 
+						h4 Спирулина
+						a(href="#") подробнее
+					.section-1__tree-item 
+						h4 Выжимка из плодов шиповника
+						a(href="#") подробнее
+				.section-1__tree-col
+					.section-1__tree-item 
+						h4 Ламинария
+						a(href="#") подробнее
+					.section-1__tree-item 
+						h4 Клетчатка
+						a(href="#") подробнее
+		
+		
+		section.header.section-2
+			.container-full
+				.header-top
+					.country
+						p Теперь в <strong>Беларуси!</strong>
+						.country__img
+							img(src="./img/by.png", alt="belarus")
+				.row
+					.col-wrap
+						h2.header__head Ваша стройность на завтрак!						
+						.col-50.col-right
+							.header-center
+								img(src="./img/banka-min.png", alt="duran")
+								a.open-form <i class="fa fa-search" aria-hidden="true"></i>	
+							form.callback
+								.callback__date
+									p До 
+										span 03.10.17
+										| скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i>
+								.callback__price
+									.price-left
+										| Цена:
+									.price-right
+										strike.price__old 1980
+										p.price__new 990
+										p.price__currency бел. руб.
+								.callback__input
+									.callback__input-name
+										input(placeholder="Ваше имя")
+										span <i class="fa fa-user" aria-hidden="true"></i>
+									.callback__input-tel
+										input(placeholder="Ваш номер телефона")
+										span <i class="fa fa-phone" aria-hidden="true"></i>
+								button.btn(type="sybmit") 
+									span Оформить заказ
+									<i class="fa fa-paper-plane" aria-hidden="true"></i>
+								.callback__desc
+									span * Закажи прямо сейчас и получи подарок!	
+			.header-message
+				p «Я НЕ УМЕЮ ХУДЕТЬ, НО С КОКТЕЙЛЕМ ДЮКАНА ПОЛУЧИЛОСЬ!»
+				.header-message-close X
+				.header-message_wrap
+					.col
+						strong Виктория, 
+						| 44 года
+					.col
+						| Вес до: 137 кг.
+					.col
+						| Вес после: 78 кг.
+			a.header-bottom 
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+		section.section.section-3
+			.row
+				.section-3__text
+					h2.header__head Избавляться от лишнего веса <br><strong>c «Коктейлем Дюкана»</strong> – это…
+					ul.section-3__itemss
+						li <i class="fa fa-check" aria-hidden="true"></i> Безопасно!
+						li <i class="fa fa-check" aria-hidden="true"></i> Быстро!
+						li <i class="fa fa-check" aria-hidden="true"></i> Просто!
+
+		section.section-4
+			.row
+				.section-4__block
+					h3 “Я не умею худеть”…
+					p ...говорили мне те, кто пытался сидеть на диетах, контролировать питание и даже заниматься спортом. Весь мой опыт по созданию приемлемого рациона не всем помогает справиться с лишним весом. Те, у кого настоящие проблемы, не способны самостоятельно держать себя под контролем. И тогда я принял самое важное решение в моей жизни: разработать коктейль, который заменит людям завтрак и поможет бороться с избыточным жиром даже в самых серьезных случаях.
+					quote 
+						strong  — Пьер Дюкан
+
+		section.section-5
+			h2 Комментарий диетолога
+			.section-5__block
+				.block-left
+				.block-right
+					h3 Екатерина <br> Яковлева
+					h4 Диетолог-нутрициолог центра снижения веса «Доктор Борменталь» г. Москва
+					.block-right__text
+						p Мы работали с десятками пациентов, которым тяжело взять себя в руки и питаться правильно. Много психологических проблем, много насилия над собой, много усилий, и все не приносят почти никакого результата.
+						p В итоге человек теряет мотивацию, волю и срывается на неконтролируемые приемы пищи. В центре снижения веса “Доктор Борменталь” мы решили включить в рацион худеющих “Коктейль Дюкана” для экспресс-похудения.
+						p И результаты превзошли все наши ожидания. Пациенты, заменившие завтрак коктейлем стали ТЕРЯТЬ ОТ 300 до 600 
+						p И результаты превзошли все наши ожидания. Пациенты, заменившие завтрак коктейлем стали ТЕРЯТЬ ОТ 300 до 600 
+						p И результаты превзошли все наши ожидания. Пациенты, заменившие завтрак коктейлем стали ТЕРЯТЬ ОТ 300 до 600 
+		
+		section.header.section-2.section-6
+			.container-full
+				.header-top
+					.country
+						p Теперь в <strong>Беларуси!</strong>
+						.country__img
+							img(src="./img/by.png", alt="belarus")
+				.row
+					.col-wrap
+						h2.header__head Ваша стройность на завтрак!						
+						.col-50.col-right
+							.header-center
+								img(src="./img/banka-min.png", alt="duran")
+								a.open-form <i class="fa fa-search" aria-hidden="true"></i>	
+							form.callback
+								.callback__date
+									p До 
+										span 03.10.17
+										| скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i>
+								.callback__price
+									.price-left
+										| Цена:
+									.price-right
+										strike.price__old 1980
+										p.price__new 990
+										p.price__currency бел. руб.
+								.callback__input
+									.callback__input-name
+										input(placeholder="Ваше имя")
+										span <i class="fa fa-user" aria-hidden="true"></i>
+									.callback__input-tel
+										input(placeholder="Ваш номер телефона")
+										span <i class="fa fa-phone" aria-hidden="true"></i>
+								button.btn(type="sybmit") 
+									span Оформить заказ
+									<i class="fa fa-paper-plane" aria-hidden="true"></i>
+								.callback__desc
+									span * Закажи прямо сейчас и получи подарок!	
+			.header-message
+				p «Я НЕ УМЕЮ ХУДЕТЬ, НО С КОКТЕЙЛЕМ ДЮКАНА ПОЛУЧИЛОСЬ!»
+				.header-message-close X
+				.header-message_wrap
+					.col
+						strong Виктория, 
+						| 44 года
+					.col
+						| Вес до: 137 кг.
+					.col
+						| Вес после: 78 кг.
+			a.header-bottom 
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+		
+		section.section-7
+			.row
+				.section-7__block
+					h2 Мы не раз слышали эти  слова:
+					ul.section-7__items
+						li Я ХОЧУ ПОХУДЕТЬ, НО <strong>НЕ ПОЛУЧАЕТСЯ!</strong> 
+						li Я СИЖУ НА ДИЕТАХ, НО ОНИ <strong>НЕ РАБОТАЮТ!</strong> 
+						li МНЕ <strong>ЗАПРЕЩЕНО</strong> РЕЗКО ХУДЕТЬ! 
+						li МНЕ <strong>СЛОЖНО</strong> ДАЕТСЯ ПОХУДЕНИЕ! 
+						li У МЕНЯ <strong>ГЕНЕТИКА!</strong> 
+						li Я ПОПРАВИЛАСЬ <strong>ПОСЛЕ РОДОВ!</strong>  
+						li У МЕНЯ <strong>КРУПНАЯ КОСТЬ!</strong>  
+		
+		section.section-8
+			.section-8__block
+				h2 <strong>НО С ПОЯВЛЕНИЕМ «КОКТЕЙЛЯ ДЮКАНА»</strong> Мы просто перестали в них верить!
+				button.btn(type="sybmit") 
+					span Перейти к заказу
+					<i class="fa fa-paper-plane" aria-hidden="true"></i>
+
+
+		section.section.section-9
+			h2 ПОПРОЩАЙТЕСЬ С ЛИШНИМ весом
+				strong Раз и навсегда!
+			h3 Начав принимать «Коктель Дюкана»
+			.section-9__block
+				.block-left
+					h3 Коктейль Дюкана
+						<i class="fa fa-check" aria-hidden="true"></i>
+					img(src="./img/section-9-left.png", alt="Коктель Дюкана")
+					h4 Замените завтрак порцией коктейля и БОЛЬШЕ НИЧЕГО НЕ НУЖНО! <i class="fa fa-check" aria-hidden="true"></i>
+					h4 Ешьте свои любимые блюда на обед и ужин! <i class="fa fa-check" aria-hidden="true"></i>
+					h4 Живите свободной жизнью! <i class="fa fa-check" aria-hidden="true"></i>
+					h4 Потеря веса начнется в первый же день! Вы это увидите сами!  <i class="fa fa-check" aria-hidden="true"></i>
+					h4 Коктейль Дюкана - это проверенная методика, доступная каждому  <i class="fa fa-check" aria-hidden="true"></i>	
+
+				.block-right
+					h3 Диеты и таблетки
+						<i class="fa fa-check" aria-hidden="true"></i>
+					img(src="./img/section-9-right.png", alt="Диеты и таблетки")
+					h4 Нужно контролировать калории и каждый прием пищи <i class="fa fa-check" aria-hidden="true"></i>
+					h4 Нужно постоянно отказывать себе в еде <i class="fa fa-check" aria-hidden="true"></i>
+					h4 Нужно быть в стрессе от того, что надо контролировать себя <i class="fa fa-check" aria-hidden="true"></i>
+					h4 Нужно испытывать боль и страдания, чтобы увидеть первый результат  <i class="fa fa-check" aria-hidden="true"></i>
+					h4 Нужно перепробовать десятки диет, чтобы понять, какая подходит <i class="fa fa-check" aria-hidden="true"></i>
+
+			button.btn(type="sybmit") 
+				span Перейти к заказу
+				<i class="fa fa-paper-plane" aria-hidden="true"></i>
+		
+		section.section.section-10
+			h2 И самое главное
+				strong Натурально!
+			h3 В составе Коктейля Дюкана только натуральные ингредиенты, добытые со дна моря и с органически чистых плантаций. 
+			.section-10__block
+				.block__item
+					img(src="../img/section-10-1.png", alt="")
+				.block__item
+					img(src="../img/section-10-2.png", alt="")
+				.block__item
+					img(src="../img/section-10-3.png", alt="")
+
+		section.section.section-11
+			h2 <strong> Как похудеть </strong> с коктейлем дюкана?
+			.section-11__block
+				.block__item
+					.item 1
+					p Пить вместо завтрака по 1 мерной ложке, <br> размешивая с водой
+				.block__item
+					.item 2
+					p <span>ГОТОВО!</span> <br> Коктейль УЖЕ делает все за вас!
+			img(src="./img/section-11.png", alt="duran")
+			ul.section-11__block
+				li <strong>В одной мерной ложке</strong> коктейля содержится необходимое количество витаминов и микроэлементов.
+				li Одна мерная ложка коктейля заменяет <strong>полноценный завтрак</strong>
+				li Порция коктейля работает <strong>ВЕСЬ ДЕНЬ</strong>, помогая перерабатывать калории, потребляемые за день
+				li Коктейль каждый день – это <strong>залог похудения и энергичности! </strong>
+				li Коктейль Дюкана – <strong>универсальное</strong> питательное средство. 
+				li Если вам неудобно пить его<strong> на завтрак</strong>, вы можете заменить им <strong>ужин</strong>. 
+				li Коктейль Дюкана подходит не только желающим похудеть, но и <strong>спортсменам</strong>, а также людям <strong>во время реабилитации</strong> после аварий. 
+				li Коктейль Дюкана <strong>не имеет противопоказаний и</strong> побочных эффектов!
+
+
+		section.header.section-2.section-6
+			.container-full
+				.header-top
+					.country
+						p Теперь в <strong>Беларуси!</strong>
+						.country__img
+							img(src="./img/by.png", alt="belarus")
+				.row
+					.col-wrap
+						h2.header__head Ваша стройность на завтрак!						
+						.col-50.col-right
+							.header-center
+								img(src="./img/banka-min.png", alt="duran")
+								a.open-form <i class="fa fa-search" aria-hidden="true"></i>	
+							form.callback
+								.callback__date
+									p До 
+										span 03.10.17
+										| скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i>
+								.callback__price
+									.price-left
+										| Цена:
+									.price-right
+										strike.price__old 1980
+										p.price__new 990
+										p.price__currency бел. руб.
+								.callback__input
+									.callback__input-name
+										input(placeholder="Ваше имя")
+										span <i class="fa fa-user" aria-hidden="true"></i>
+									.callback__input-tel
+										input(placeholder="Ваш номер телефона")
+										span <i class="fa fa-phone" aria-hidden="true"></i>
+								button.btn(type="sybmit") 
+									span Оформить заказ
+									<i class="fa fa-paper-plane" aria-hidden="true"></i>
+								.callback__desc
+									span * Закажи прямо сейчас и получи подарок!	
+			.header-message
+				p «Я НЕ УМЕЮ ХУДЕТЬ, НО С КОКТЕЙЛЕМ ДЮКАНА ПОЛУЧИЛОСЬ!»
+				.header-message-close X
+				.header-message_wrap
+					.col
+						strong Виктория, 
+						| 44 года
+					.col
+						| Вес до: 137 кг.
+					.col
+						| Вес после: 78 кг.
+			a.header-bottom 
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+
+		section.section.section-13
+			h2 СЛОВО ТЕМ, 
+				strong КТО УЖЕ СДЕЛАЛ ЭТО!
+			.section-13-owl.owl-carousel
+				.section-13__item 
+					.owl-left(style="background-image: url('./img/section-13.png')")
+					.owl-right
+						.owl-wrap
+								h3 Виктория Т., 34 года 
+								p Принимала Коктейль Дюкана 1.5 месяца <span>Потеряла 16 кг.</span>
+						.owl-text
+							p «Я располнела после родов, и никак не могла похудеть! Перепробовала кучу способов. На диете особо не посидишь с ребенком. Надо готовить на себя и на него отдельно, а у мамы на такое времени нет. Таблетки пробовала тоже…
+							p У меня от них началась рвота и я вообще думала отравлюсь. Бросила на третий день. Но тут подруга посоветовала мне Дюкана. Я сперва думала диету, собиралась сказать ей что я не могу на таких диетах сидеть. Но нет! Это оказался очень удобный коктейль, который я по утрам пила, вместо завтрака.
+							p И О ЧУДО! Я стала сбрасывать вес! В день уходило примерно по 400-500 гр. Хорошая динамика и безопасно для здоровья! В итоге, пропила так полтора месяца, и приостановила, потому что похудела до своего идеального веса!»
+				.section-13__item 
+					.owl-left(style="background-image: url('./img/section-13.png')")
+					.owl-right
+						.owl-wrap
+								h3 Виктория Т., 34 года 
+								p Принимала Коктейль Дюкана 1.5 месяца <span>Потеряла 16 кг.</span>
+						.owl-text
+							p «Я располнела после родов, и никак не могла похудеть! Перепробовала кучу способов. На диете особо не посидишь с ребенком. Надо готовить на себя и на него отдельно, а у мамы на такое времени нет. Таблетки пробовала тоже…
+							p У меня от них началась рвота и я вообще думала отравлюсь. Бросила на третий день. Но тут подруга посоветовала мне Дюкана. Я сперва думала диету, собиралась сказать ей что я не могу на таких диетах сидеть. Но нет! Это оказался очень удобный коктейль, который я по утрам пила, вместо завтрака.
+							p И О ЧУДО! Я стала сбрасывать вес! В день уходило примерно по 400-500 гр. Хорошая динамика и безопасно для здоровья! В итоге, пропила так полтора месяца, и приостановила, потому что похудела до своего идеального веса!»
+				.section-13__item 
+					.owl-left(style="background-image: url('./img/section-13.png')")
+					.owl-right
+						.owl-wrap
+								h3 Виктория Т., 34 года 
+								p Принимала Коктейль Дюкана 1.5 месяца <span>Потеряла 16 кг.</span>
+						.owl-text
+							p «Я располнела после родов, и никак не могла похудеть! Перепробовала кучу способов. На диете особо не посидишь с ребенком. Надо готовить на себя и на него отдельно, а у мамы на такое времени нет. Таблетки пробовала тоже…
+							p У меня от них началась рвота и я вообще думала отравлюсь. Бросила на третий день. Но тут подруга посоветовала мне Дюкана. Я сперва думала диету, собиралась сказать ей что я не могу на таких диетах сидеть. Но нет! Это оказался очень удобный коктейль, который я по утрам пила, вместо завтрака.
+							p И О ЧУДО! Я стала сбрасывать вес! В день уходило примерно по 400-500 гр. Хорошая динамика и безопасно для здоровья! В итоге, пропила так полтора месяца, и приостановила, потому что похудела до своего идеального веса!»
+				
+
+		script(src="https://use.fontawesome.com/0cc9c94f4c.js")
+		script(src="js/scripts.min.js")

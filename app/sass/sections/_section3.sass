@@ -1,0 +1,52 @@
+.section-3
+	position: relative
+	background-image: url(../img/section-3.png)
+	background-repeat: no-repeat
+	background-position: right bottom
+	background-size: contain
+	background-color: #f5f6f8
+	height: 100vh
+	min-height: 560px
+	.section-3__text
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		max-width: 400px
+		text-align: left
+	h2.header__head
+		text-align: left
+		font-size: 40px
+		margin-top: 0
+		margin-bottom: 60px
+		strong
+			display: inline
+	.section-3__itemss
+		li
+			color: #709a34
+			text-transform: uppercase
+			font-weight: "FontfabricRegular", sans-serif
+			font-weight: 700
+			margin-bottom: 40px
+			&:last-child
+				margin-bottom: 20px
+			>i
+				width: 44px
+				height: 44px
+				border: 1px solid #709a34
+				border-radius: 50%
+				text-align: center
+				line-height: 44px
+				margin-right: 12px
+
+@media only screen and (max-width : 1100px)
+	.section-3
+		background-position: 50vw bottom
+		.row
+			padding: 0 15px
+@media only screen and (max-width : 700px)
+	.section-3
+		background-size: cover
+@media only screen and (max-width : 500px)
+	.section-3
+		h2.header__head
+			font-size: 32px

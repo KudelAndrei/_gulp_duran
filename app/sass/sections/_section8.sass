@@ -1,0 +1,58 @@
+.section-8
+	background-color: #f1e495
+	position: relative
+	background-image: url(../img/section-8.png)
+	background-repeat: no-repeat
+	background-position: left center
+	height: 100vh
+	min-height: 670px
+	.section-8__block
+		max-width: 630px
+		padding: 0 15px
+		z-index: 10
+		position: absolute
+		top: 50%
+		right: 20%
+		transform: translate(0, -50%)
+		h2
+			position: relative
+			font-size: 48px
+			font-weight: 300
+			line-height: 1.2
+			text-transform: uppercase
+			strong
+				display: block
+			&::before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+
+@media only screen and (max-width : 1600px)
+	.section-8
+		.section-8__block
+			right: 100px	
+
+@media only screen and (max-width : 1370px)
+	.section-8
+		background-position: -150px center
+		.section-8__block
+			right: 8%
+
+@media only screen and (max-width : 1240px)
+	.section-8
+		background-position: -300px center
+
+@media only screen and (max-width : 700px)
+	.section-8
+		.section-8__block
+			h2
+				font-size: 38px
+
+@media only screen and (max-width : 500px)
+	.section-8
+		.section-8__block
+			h2
+				font-size: 24px
+				strong
+					margin-bottom: 10px

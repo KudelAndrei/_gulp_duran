@@ -1,0 +1,124 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "sections/header"
+@import "sections/section1"
+@import "sections/section2"
+@import "sections/section3"
+@import "sections/section4"
+@import "sections/section5"
+@import "sections/section7"
+@import "sections/section8"
+@import "sections/section9"
+@import "sections/section10"
+@import "sections/section11"
+@import "sections/section13"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden!important
+	padding: 0
+	margin: 0
+	color: #333
+
+*, *::before, *::after
+	box-sizing: border-box
+
+h1,h2,h3,h4,h5,h6
+	font-family: "FontfabricBold", sans-serif
+
+ul,li
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+.container-full
+	max-width: 1170px
+	margin: 0 auto
+
+.row
+	max-width: 1030px
+	margin: 0 auto
+
+.section
+	h2
+		text-align: center
+		font-family: "FontfabricRegular", sans-serif
+		text-transform: uppercase
+		font-size: 48px
+		line-height: 1.2
+		font-weight: 300
+		margin: 40px 0 30px 
+		strong
+			display: block
+			font-weight: 700
+
+.green
+	color: #84c835
+
+.purple
+	color: #882b8e
+
+.btn
+	position: relative
+	background-color: #82ad4d
+	color: #fff
+	text-transform: uppercase
+	font-weight: 700
+	font-size: 17px
+	text-align: center
+	height: 60px
+	border-radius: 3px
+	border: none
+	cursor: pointer
+	overflow: hidden
+	box-shadow: 0 10px 25px 0 rgba(#69a52e, .35)
+	transition: 0.3s ease
+	padding-right: 70px
+	padding-left: 18px
+	outline: none
+	&:hover
+		box-shadow: none
+	>i
+		position: absolute
+		content: ""
+		background-color: #6b9431
+		width: 54px
+		line-height: 60px
+		height: 100%
+		top: 0
+		right: 0
+
+@media only screen and (max-width : 400px)
+	.btn
+		font-size: 14px

@@ -1,0 +1,95 @@
+.section-1
+	text-align: center
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		bottom: -12px
+		left: 50%
+		transform: translateX(-50%)
+		background-image: url(../img/section-1.png)
+		width: 320px
+		height: 625px
+		background-repeat: no-repeat
+	h3.section-1__desc
+		position: relative
+		font-size: 20px
+		padding-bottom: 20px
+		margin-bottom: 30px
+		line-height: 1.2
+		font-weight: 300
+		&::before
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+			width: 125px
+			height: 1px
+			background-color: #333
+	.section-1__text
+		max-width: 570px
+		margin: 0 auto
+		line-height: 1.4
+		margin-bottom: 35px
+	.section-1__tree
+		position: relative
+		max-width: 770px
+		margin: 0 auto
+		padding-bottom: 205px
+	.section-1__tree-col
+		display: flex
+		justify-content: space-between
+		.section-1__tree-item
+			margin-bottom: 80px
+			width: 260px
+		.section-1__tree-item:first-child
+			padding-right: 60px
+			text-align: right
+		.section-1__tree-item:last-child
+			padding-left: 60px
+			text-align: left
+			width: 270px
+			a
+				border-bottom: 1px dotted #882b8e
+		h4
+			font-size: 24px
+			font-weight: 300
+			line-height: 1
+			margin: 0
+		a
+			color: #333
+			text-decoration: none
+			border-bottom: 1px dotted #84c835
+			font-size: 12px
+			text-transform: uppercase
+			&:hover
+				border-bottom: 1px dotted transparent
+
+@media only screen and (max-width : 800px)
+	.section-1	
+		padding: 0 15px
+	.section-1__tree
+		padding-left: 15px
+		padding-right: 15px
+		.section-1__tree-item
+			background-color: #fff
+
+@media only screen and (max-width : 620px)
+	.section-1
+		&::before
+			display: none
+		.section-1__tree
+			padding-bottom: 20px
+
+@media only screen and (max-width : 400px)
+	.section.section-1
+		h2
+			font-size: 40px
+		.section-1__tree
+			.section-1__tree-col
+				flex-wrap: wrap
+				.section-1__tree-item
+					text-align: left
+					padding-left: 0
+					margin-bottom: 20px
