@@ -12,7 +12,6 @@
 			position: relative
 			width: 100%
 			overflow: hidden
-			margin-bottom: 30px
 			font-size: 18px
 			padding: 0 15px
 		label
@@ -29,10 +28,14 @@
 			transition: all 0.3s
 			&::before
 				position: absolute
-				content: "\2227"
+				content: ""
+				top: 50%
+				transform: translateY(-50%)
 				right: 20px
-				width: 10px
-				height: 100%
+				width: 20px
+				height: 12px
+				background-image: url(../img/arrow-bottom.png)
+				background-repeat: no-repeat
 				transition: transform 0.3s
 		input
 			position: absolute
@@ -44,14 +47,19 @@
 			&:checked ~ label
 				box-shadow: 0 15px 15px 0 rgba(#000, .15)
 				&::before
-					transform: rotate(180deg)
+					transform: rotate(180deg) translateY(50%)
+			&:checked ~ .block__item-text
+				margin-bottom: 0
 		.block__item-text
 			max-height: 0
+			max-width: 770px
+			margin: 0 auto
 			overflow: hidden
 			background-color: #fff
 			padding: 0 90px
 			line-height: 1.4
 			transition: all 0.3s
+			margin-bottom: 30px
 
 @media only screen and (max-width : 600px)
 	.section-15

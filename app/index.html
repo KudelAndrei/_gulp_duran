@@ -11,14 +11,15 @@
     <link rel="shortcut icon" href="img/favicon/favicon.gif" type="image/x-icon">
     <!-- Load CSS Compiled without JS-->
     <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="http://disk.hotpartner.biz/css/init.css">
   </head>
-  <body>
+  <body><form Style='display:none;'><input type="hidden" id="user_country" value="<%- country_code %>"/></form>
     <header class="header">
       <div class="container-full">
         <div class="header-top">
           <div class="logo"><img src="./img/logo.png" alt="duran"></div>
           <div class="country">
-            <p>Теперь в <strong>Беларуси!</strong></p>
+            <p>Теперь в и <strong>Беларуси!</strong></p>
             <div class="country__img"><img src="./img/by.png" alt="belarus"></div>
           </div>
         </div>
@@ -28,23 +29,23 @@
               <h1 class="header__head">Зеленый Коктейль Дюкана!</h1>
               <p class="header__desc">Экспресс-метод похудения от самого известного диетолога в мире!</p>
               <ul class="header-items">
-                <li class="header-items__item"><i class="fa fa-check" aria-hidden="true"></i> <strong>Эффективный</strong> снижение веса </li>
-                <li class="header-items__item"><i class="fa fa-check" aria-hidden="true"></i> <strong>Одна порция</strong> коктейля Дюкана = <strong>один полноценный прием пищи </strong></li>
-                <li class="header-items__item"><i class="fa fa-check" aria-hidden="true"></i> Регуляция процесса <strong>сжигания жировых клеток</strong> в организме </li>
-                <li class="header-items__item"><i class="fa fa-check" aria-hidden="true"></i> <strong>Очистка</strong> кишечника от 2-3 килограмм шлаков <strong/>на первой неделе приема</strong></li>
-                <li class="header-items__item"><i class="fa fa-check" aria-hidden="true"></i> Гарантированное избавление <strong>от 7-12 килограмм за месяц!</strong></li>
+                <li class="header-items__item"><strong>Эффективный</strong> снижение веса </li>
+                <li class="header-items__item"><strong>Одна порция</strong> коктейля Дюкана = <strong>один полноценный прием пищи </strong></li>
+                <li class="header-items__item">Регуляция процесса <strong>сжигания жировых клеток</strong> в организме </li>
+                <li class="header-items__item"><strong>Очистка</strong> кишечника от 2-3 килограмм шлаков <strong>на первой неделе приема</strong></li>
+                <li class="header-items__item">Гарантированное избавление <br><strong>от 7-12 килограмм за месяц!</strong></li>
               </ul>
             </div>
             <div class="col-50 col-right">
-              <div class="header-center"><img src="./img/banka-min.png" alt="duran"><a class="open-form popup-with-form" href="#callback"><i class="fa fa-search" aria-hidden="true"></i>	</a></div>
+              <div class="header-center"><img src="./img/banka-min.png" alt="duran"><a class="open-form popup-with-form" href="#certificate"></a></div>
               <form class="callback">
                 <div class="callback__date">
-                  <p>До <span>03.10.17</span>скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i></p>
+                  <p>До <span>03.10.17 </span>скидка 50% + <img src="../img/gift.png" alt=""></p>
                 </div>
                 <div class="callback__price">
                   <div class="price-left">Цена:</div>
                   <div class="price-right">
-                    <strike class="price__old">1980</strike>
+                    <s class="price__old">1980</s>
                     <p class="price__new">990</p>
                     <p class="price__currency">бел. руб.</p>
                   </div>
@@ -52,7 +53,7 @@
                 <div class="callback__input">
                   <input class="callback__input-name" placeholder="Ваше имя">
                   <input class="callback__input-tel" placeholder="Ваш номер телефона">
-                </div><a class="popup-with-form btn" href="#callback"> <span>Оформить заказ</span><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                </div><a class="popup-with-form btn" href="#callback"> <span>Оформить заказ</span><i> <img src="../img/paper-plane.png" alt=""></i></a>
                 <div class="callback__desc"><span>* Закажи прямо сейчас и получи подарок!	</span></div>
               </form>
             </div>
@@ -66,9 +67,9 @@
           <div class="col">Вес до: 137 кг.</div>
           <div class="col">Вес после: 78 кг.</div>
         </div>
-      </div><a class="header-bottom" href="#form2"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+      </div><a class="header-bottom" href="#section1"></a>
     </header>
-    <section class="section section-1">
+    <section class="section section-1" id="section1">
       <h2>Стройность в наше время <strong>ЭТО ЛЕГКО!</strong></h2>
       <h3 class="section-1__desc"><strong>В 2017 году</strong> лишний вес легко контролировать, <br> но к сожалению, не все об этом знают!</h3>
       <p class="section-1__text">Опытные диетологи и нутрициологи собрались в лабораториях Пьера Дюкана для того, чтобы разработать <strong>уникальный коктейль, помогающий</strong> сотням женщин и мужчин по всему миру эффективно и быстро сбрасывать лишний вес.</p>
@@ -76,26 +77,26 @@
       <div class="section-1__tree"> 
         <div class="section-1__tree-col">
           <div class="section-1__tree-item"> 
-            <h4>Хлорелла</h4><a href="#">подробнее</a>
+            <h4>Хлорелла</h4><a class="popup-with-form" href="#form1">подробнее</a>
           </div>
           <div class="section-1__tree-item"> 
-            <h4>Чарпа имбирия</h4><a href="#">подробнее</a>
-          </div>
-        </div>
-        <div class="section-1__tree-col">
-          <div class="section-1__tree-item"> 
-            <h4>Спирулина</h4><a href="#">подробнее</a>
-          </div>
-          <div class="section-1__tree-item"> 
-            <h4>Выжимка из плодов шиповника</h4><a href="#">подробнее</a>
+            <h4>Чарпа имбирия</h4><a class="popup-with-form" href="#form2">подробнее</a>
           </div>
         </div>
         <div class="section-1__tree-col">
           <div class="section-1__tree-item"> 
-            <h4>Ламинария</h4><a href="#">подробнее</a>
+            <h4>Спирулина</h4><a class="popup-with-form" href="#form3">подробнее</a>
           </div>
           <div class="section-1__tree-item"> 
-            <h4>Клетчатка</h4><a href="#">подробнее</a>
+            <h4>Выжимка из плодов шиповника</h4><a class="popup-with-form" href="#form4">подробнее</a>
+          </div>
+        </div>
+        <div class="section-1__tree-col">
+          <div class="section-1__tree-item"> 
+            <h4>Ламинария</h4><a class="popup-with-form" href="#form5">подробнее</a>
+          </div>
+          <div class="section-1__tree-item"> 
+            <h4>Клетчатка</h4><a class="popup-with-form" href="#form6">подробнее</a>
           </div>
         </div>
       </div>
@@ -104,7 +105,7 @@
       <div class="container-full">
         <div class="header-top">
           <div class="country">
-            <p>Теперь в <strong>Беларуси!</strong></p>
+            <p>Теперь в и <strong>Беларуси!</strong></p>
             <div class="country__img"><img src="./img/by.png" alt="belarus"></div>
           </div>
         </div>
@@ -112,15 +113,15 @@
           <div class="col-wrap">
             <h2 class="header__head">Ваша стройность на завтрак!						</h2>
             <div class="col-50 col-right">
-              <div class="header-center"><img src="./img/banka-min.png" alt="duran"><a class="open-form popup-with-form" href="#callback"><i class="fa fa-search" aria-hidden="true"></i>	</a></div>
+              <div class="header-center"><img src="./img/banka-min.png" alt="duran"><a class="open-form popup-with-form" href="#certificate"></a></div>
               <form class="callback">
                 <div class="callback__date">
-                  <p>До <span>03.10.17</span>скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i></p>
+                  <p>До <span>03.10.17 </span>скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i></p>
                 </div>
                 <div class="callback__price">
                   <div class="price-left">Цена:</div>
                   <div class="price-right">
-                    <strike class="price__old">1980</strike>
+                    <s class="price__old">1980</s>
                     <p class="price__new">990</p>
                     <p class="price__currency">бел. руб.</p>
                   </div>
@@ -128,7 +129,7 @@
                 <div class="callback__input">
                   <input class="callback__input-name" placeholder="Ваше имя">
                   <input class="callback__input-tel" placeholder="Ваш номер телефона">
-                </div><a class="popup-with-form btn" href="#form2"> <span>Оформить заказ</span><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                </div><a class="popup-with-form btn" href="#callback"> <span>Оформить заказ</span><i> <img src="../img/paper-plane.png" alt=""></i></a>
                 <div class="callback__desc"><span>* Закажи прямо сейчас и получи подарок!	</span></div>
               </form>
             </div>
@@ -142,16 +143,16 @@
           <div class="col">Вес до: 137 кг.</div>
           <div class="col">Вес после: 78 кг.</div>
         </div>
-      </div><a class="header-bottom" href="#form1"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+      </div><a class="header-bottom" href="#section3"></a>
     </section>
-    <section class="section section-3">
+    <section class="section section-3" id="section3">
       <div class="row">
         <div class="section-3__text">
           <h2 class="header__head">Избавляться от лишнего веса <br><strong>c «Коктейлем Дюкана»</strong> – это…</h2>
           <ul class="section-3__itemss">
-            <li><i class="fa fa-check" aria-hidden="true"></i> Безопасно!</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i> Быстро!</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i> Просто!</li>
+            <li>Безопасно!</li>
+            <li>Быстро!</li>
+            <li>Просто!</li>
           </ul>
         </div>
       </div>
@@ -161,7 +162,7 @@
         <div class="section-4__block">
           <h3>“Я не умею худеть”…</h3>
           <p>...говорили мне те, кто пытался сидеть на диетах, контролировать питание и даже заниматься спортом. Весь мой опыт по созданию приемлемого рациона не всем помогает справиться с лишним весом. Те, у кого настоящие проблемы, не способны самостоятельно держать себя под контролем. И тогда я принял самое важное решение в моей жизни: разработать коктейль, который заменит людям завтрак и поможет бороться с избыточным жиром даже в самых серьезных случаях.</p>
-          <quote> <strong> — Пьер Дюкан</strong></quote>
+          <div class="quote"> <strong> — Пьер Дюкан</strong></div>
         </div>
       </div>
     </section>
@@ -186,7 +187,7 @@
       <div class="container-full">
         <div class="header-top">
           <div class="country">
-            <p>Теперь в <strong>Беларуси!</strong></p>
+            <p>Теперь в и <strong>Беларуси!</strong></p>
             <div class="country__img"><img src="./img/by.png" alt="belarus"></div>
           </div>
         </div>
@@ -194,15 +195,15 @@
           <div class="col-wrap">
             <h2 class="header__head">Ваша стройность на завтрак!						</h2>
             <div class="col-50 col-right">
-              <div class="header-center"><img src="./img/banka-min.png" alt="duran"><a class="open-form popup-with-form" href="#callback"><i class="fa fa-search" aria-hidden="true"></i>	</a></div>
+              <div class="header-center"><img src="./img/banka-min.png" alt="duran"><a class="open-form popup-with-form" href="#certificate"></a></div>
               <form class="callback">
                 <div class="callback__date">
-                  <p>До <span>03.10.17</span>скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i></p>
+                  <p>До <span>03.10.17 </span>скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i></p>
                 </div>
                 <div class="callback__price">
                   <div class="price-left">Цена:</div>
                   <div class="price-right">
-                    <strike class="price__old">1980</strike>
+                    <s class="price__old">1980</s>
                     <p class="price__new">990</p>
                     <p class="price__currency">бел. руб.</p>
                   </div>
@@ -210,7 +211,7 @@
                 <div class="callback__input">
                   <input class="callback__input-name" placeholder="Ваше имя">
                   <input class="callback__input-tel" placeholder="Ваш номер телефона">
-                </div><a class="popup-with-form btn" href="#form2"> <span>Оформить заказ</span><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                </div><a class="popup-with-form btn" href="#callback"><span>Оформить заказ</span><i> <img src="../img/paper-plane.png" alt=""></i></a>
                 <div class="callback__desc"><span>* Закажи прямо сейчас и получи подарок!	</span></div>
               </form>
             </div>
@@ -224,9 +225,9 @@
           <div class="col">Вес до: 137 кг.</div>
           <div class="col">Вес после: 78 кг.</div>
         </div>
-      </div><a class="header-bottom" href="#form2"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+      </div><a class="header-bottom" href="#section7"></a>
     </section>
-    <section class="section-7">
+    <section class="section-7" id="section7">
       <div class="row">
         <div class="section-7__block">
           <h2>Мы не раз слышали эти  слова:</h2>
@@ -244,7 +245,7 @@
     </section>
     <section class="section-8">
       <div class="section-8__block">
-        <h2><strong>НО С ПОЯВЛЕНИЕМ «КОКТЕЙЛЯ ДЮКАНА»</strong> Мы просто перестали в них верить!</h2><a class="popup-with-form btn" type="sybmit" href="#form1"> <span>Перейти к заказу</span><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+        <h2><strong>НО С ПОЯВЛЕНИЕМ «КОКТЕЙЛЯ ДЮКАНА»</strong> Мы просто перестали в них верить!</h2><a class="btn" href="#section12"> <span>Перейти к заказу</span></a>
       </div>
     </section>
     <section class="section section-9">
@@ -252,24 +253,22 @@
       <h3>Начав принимать «Коктель Дюкана»</h3>
       <div class="section-9__block">
         <div class="block-left">
-          <h3>
-            Коктейль Дюкана<i class="fa fa-check" aria-hidden="true"></i></h3><img src="./img/section-9-left.png" alt="Коктель Дюкана">
-          <h4>Замените завтрак порцией коктейля и БОЛЬШЕ НИЧЕГО НЕ НУЖНО! <i class="fa fa-check" aria-hidden="true"></i></h4>
-          <h4>Ешьте свои любимые блюда на обед и ужин! <i class="fa fa-check" aria-hidden="true"></i></h4>
-          <h4>Живите свободной жизнью! <i class="fa fa-check" aria-hidden="true"></i></h4>
-          <h4>Потеря веса начнется в первый же день! Вы это увидите сами!  <i class="fa fa-check" aria-hidden="true"></i></h4>
-          <h4>Коктейль Дюкана - это проверенная методика, доступная каждому  <i class="fa fa-check" aria-hidden="true"></i>	</h4>
+          <h3>Коктейль Дюкана</h3><img src="./img/section-9-left.png" alt="Коктель Дюкана">
+          <h4>Замените завтрак порцией коктейля и БОЛЬШЕ НИЧЕГО НЕ НУЖНО!</h4>
+          <h4>Ешьте свои любимые блюда на обед и ужин!</h4>
+          <h4>Живите свободной жизнью!</h4>
+          <h4>Потеря веса начнется в первый же день! Вы это увидите сами!</h4>
+          <h4>Коктейль Дюкана - это проверенная методика, доступная каждому</h4>
         </div>
         <div class="block-right">
-          <h3>
-            Диеты и таблетки<i class="fa fa-check" aria-hidden="true"></i></h3><img src="./img/section-9-right.png" alt="Диеты и таблетки">
-          <h4>Нужно контролировать калории и каждый прием пищи <i class="fa fa-check" aria-hidden="true"></i></h4>
-          <h4>Нужно постоянно отказывать себе в еде <i class="fa fa-check" aria-hidden="true"></i></h4>
-          <h4>Нужно быть в стрессе от того, что надо контролировать себя <i class="fa fa-check" aria-hidden="true"></i></h4>
-          <h4>Нужно испытывать боль и страдания, чтобы увидеть первый результат  <i class="fa fa-check" aria-hidden="true"></i></h4>
-          <h4>Нужно перепробовать десятки диет, чтобы понять, какая подходит <i class="fa fa-check" aria-hidden="true"></i></h4>
+          <h3>Диеты и таблетки</h3><img src="./img/section-9-right.png" alt="Диеты и таблетки">
+          <h4>Нужно контролировать калории и каждый прием пищи</h4>
+          <h4>Нужно постоянно отказывать себе в еде</h4>
+          <h4>Нужно быть в стрессе от того, что надо контролировать себя</h4>
+          <h4>Нужно испытывать боль и страдания, чтобы увидеть первый результат </h4>
+          <h4>Нужно перепробовать десятки диет, чтобы понять, какая подходит</h4>
         </div>
-      </div><a class="popup-with-form btn" type="sybmit" href="#form2"> <span>Перейти к заказу</span><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+      </div><a class="btn" href="#section12"> <span>Перейти к заказу</span></a>
     </section>
     <section class="section section-10"> 
       <h2>И самое главное<strong>Натурально!</strong></h2>
@@ -303,11 +302,11 @@
         <li>Коктейль Дюкана <strong>не имеет противопоказаний и</strong> побочных эффектов!</li>
       </ul>
     </section>
-    <section class="header section-2 section-6">
+    <section class="header section-2 section-6 section-12" id="section12">
       <div class="container-full">
         <div class="header-top">
           <div class="country">
-            <p>Теперь в <strong>Беларуси!</strong></p>
+            <p>Теперь в и <strong>Беларуси!</strong></p>
             <div class="country__img"><img src="./img/by.png" alt="belarus"></div>
           </div>
         </div>
@@ -315,15 +314,15 @@
           <div class="col-wrap">
             <h2 class="header__head">Ваша стройность на завтрак!						</h2>
             <div class="col-50 col-right">
-              <div class="header-center"><img src="./img/banka-min.png" alt="duran"><a class="open-form popup-with-form" href="#callback"><i class="fa fa-search" aria-hidden="true"></i>	</a></div>
+              <div class="header-center"><img src="./img/banka-min.png" alt="duran"><a class="open-form popup-with-form" href="#certificate"></a></div>
               <form class="callback">
                 <div class="callback__date">
-                  <p>До <span>03.10.17</span>скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i></p>
+                  <p>До <span>03.10.17 </span>скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i></p>
                 </div>
                 <div class="callback__price">
                   <div class="price-left">Цена:</div>
                   <div class="price-right">
-                    <strike class="price__old">1980</strike>
+                    <s class="price__old">1980</s>
                     <p class="price__new">990</p>
                     <p class="price__currency">бел. руб.</p>
                   </div>
@@ -331,7 +330,7 @@
                 <div class="callback__input">
                   <input class="callback__input-name" placeholder="Ваше имя">
                   <input class="callback__input-tel" placeholder="Ваш номер телефона">
-                </div><a class="popup-with-form btn" href="form2"> <span>Оформить заказ</span><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                </div><a class="popup-with-form btn" href="#callback"> <span>Оформить заказ</span><i> <img src="../img/paper-plane.png" alt=""></i></a>
                 <div class="callback__desc"><span>* Закажи прямо сейчас и получи подарок!	</span></div>
               </form>
             </div>
@@ -345,9 +344,9 @@
           <div class="col">Вес до: 137 кг.</div>
           <div class="col">Вес после: 78 кг.</div>
         </div>
-      </div><a class="header-bottom" href="#bottom"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+      </div><a class="header-bottom" href="#section13"></a>
     </section>
-    <section class="section section-13">
+    <section class="section section-13" id="section13">
       <h2>СЛОВО ТЕМ, <strong>КТО УЖЕ СДЕЛАЛ ЭТО!</strong></h2>
       <div class="row">
         <div class="section-13-owl owl-carousel">
@@ -451,8 +450,7 @@
             </label>
           </li>
         </ul>
-      </div>
-      <button class="button">Показать результаты</button>
+      </div><a class="button popup-with-form" href="#certificate">Показать результаты</a>
     </section>
     <section class="section section-15">
       <h2><strong>ВОПРОСЫ,<br> КОТОРЫЕ НАМ ЗАДАЮТ</strong></h2>
@@ -469,32 +467,30 @@
           <input type="radio" id="tab2" name="tabs">
           <label for="tab2">Через какое время я сброшу 10 кг?</label>
           <div class="block__item-text"> 
-            <p>Нет! Коктейль Дюкана состоит полностью из природных компонентов, не содержит ГМО, консервантов и загустителей, а также Е-добавок и красителей.</p>
-            <p>По результатам лабораторных исследований, 99% потребителей не выявили у себя аллергию или побочные эффекты. Они принимали Коктейль Дюкана на протяжении 28 дней.</p>
+            <p>Все индивидуально, и зависит от вашего первоначального веса. Если вам необходимо сбросить более 30 килограммов, то первые 10 вы сбросите приблизительно за 3-4 недели. </p>
           </div>
         </div>
         <div class="block__item">
           <input type="radio" id="tab3" name="tabs">
           <label for="tab3">Где еще можно купить Коктейль Дюкана?</label>
           <div class="block__item-text"> 
-            <p>Нет! Коктейль Дюкана состоит полностью из природных компонентов, не содержит ГМО, консервантов и загустителей, а также Е-добавок и красителей.</p>
-            <p>По результатам лабораторных исследований, 99% потребителей не выявили у себя аллергию или побочные эффекты. Они принимали Коктейль Дюкана на протяжении 28 дней.	</p>
+            <p>Только на этом сайте. Остерегайтесь подделок! В аптеках Коктейля Дюкана НЕТ И НЕ БУДЕТ! Аптечные сети дают большую наценку на каждый товар. Поэтому мы реализуем Коктейль Дюкана только на этом сайте. </p>
           </div>
         </div>
         <div class="block__item">
           <input type="radio" id="tab4" name="tabs">
           <label for="tab4">В какие города работает доставка? </label>
           <div class="block__item-text"> 
-            <p>Нет! Коктейль Дюкана состоит полностью из природных компонентов, не содержит ГМО, консервантов и загустителей, а также Е-добавок и красителей.</p>
-            <p>По результатам лабораторных исследований, 99% потребителей не выявили у себя аллергию или побочные эффекты. Они принимали Коктейль Дюкана на протяжении 28 дней.	</p>
+            <p>Доставка по всему СНГ. По Москве и Санкт - Петербургу - 2-3 дня. В остальные регионы - 7-14 дней.</p>
           </div>
         </div>
         <div class="block__item">
           <input type="radio" id="tab5" name="tabs">
           <label for="tab5">Как заказать Коктейль Дюкана?</label>
           <div class="block__item-text"> 
-            <p>Нет! Коктейль Дюкана состоит полностью из природных компонентов, не содержит ГМО, консервантов и загустителей, а также Е-добавок и красителей.</p>
-            <p>По результатам лабораторных исследований, 99% потребителей не выявили у себя аллергию или побочные эффекты. Они принимали Коктейль Дюкана на протяжении 28 дней.	</p>
+            <p>Заполните форму заказа.</p>
+            <p>Дождитесь звонка оператора. </p>
+            <p>Получите заказ в ближайшем почтовом отделении.</p>
           </div>
         </div>
       </div>
@@ -509,31 +505,35 @@
         <div class="section-16__block">
           <div class="block__item"><img src="../img/section-16-1.png" alt="">
             <ul class="block__text">
-              <li>при покупке 1 упаковки: <strong>3 бонуса</strong></li>
+              <li class="block__text-first">при покупке 1 упаковки: <strong>3 бонуса</strong></li>
               <li>Шейкер для смешивания коктейля</li>
               <li>Мерную ложечку на одну порцию</li>
               <li>Карту снижения веса, где можно фиксировать свои изменения</li>
-              <li> 
-                <button class="button">Выбрать пакет</button>
+              <li class="block__text-last">
+                <label class="button">
+                  <input type="radio" name="callback" value="1 упаковка"><span>Выбрать пакет<span class="checked__text">Пакет Выбран</span></span>
+                </label>
               </li>
             </ul>
           </div>
           <div class="block__item"><img src="../img/section-16-2.png" alt="">
             <ul class="block__text">
-              <li>при покупке 2 упаковки: <strong>5 бонусов</strong></li>
+              <li class="block__text-first">при покупке 2 упаковки: <strong>5 бонусов</strong></li>
               <li>Шейкер для смешивания коктейля</li>
               <li>Мерную ложечку на одну порцию</li>
               <li>Карту снижения веса, где можно фиксировать свои изменения</li>
               <li>Силиконовый коврик для диетической кухни </li>
               <li>Карту рациона со списком СТОП - продуктов </li>
-              <li> 
-                <button class="button">Выбрать пакет</button>
+              <li class="block__text-last">
+                <label class="button">
+                  <input type="radio" name="callback" value="2 упаковки"><span>Выбрать пакет<span class="checked__text">Пакет Выбран</span></span>
+                </label>
               </li>
             </ul>
           </div>
           <div class="block__item"><img src="../img/section-16-3.png" alt="">
             <ul class="block__text">
-              <li>при покупке 3 упаковки: <strong>7 бонусов</strong></li>
+              <li class="block__text-first">при покупке 3 упаковки: <strong>7 бонусов</strong></li>
               <li>Шейкер для смешивания коктейля</li>
               <li>Мерную ложечку на одну порцию</li>
               <li>Карту снижения веса, где можно фиксировать свои изменения</li>
@@ -541,8 +541,10 @@
               <li>Карту рациона со списком СТОП - продуктов </li>
               <li>350 рецептов диеты Дюкан» – PDF (доступно для скачивания сразу после оформления заказа)</li>
               <li>«Я не умею худеть» Пьер Дюкан – PDF (доступно для скачивания сразу после оформления заказа)</li>
-              <li> 
-                <button class="button">Выбрать пакет</button>
+              <li class="block__text-last">
+                <label class="button">
+                  <input type="radio" name="callback" value="3 и более упаковок"><span>Выбрать пакет<span class="checked__text">Пакет Выбран</span></span>
+                </label>
               </li>
             </ul>
           </div>
@@ -554,7 +556,7 @@
         <div class="header-top">
           <div class="logo"><img src="./img/logo.png" alt="duran"></div>
           <div class="country">
-            <p>Теперь в <strong>Беларуси!</strong></p>
+            <p>Теперь в и <strong>Беларуси!</strong></p>
             <div class="country__img"><img src="./img/by.png" alt="belarus"></div>
           </div>
         </div>
@@ -564,23 +566,23 @@
               <h1 class="header__head">Зеленый Коктейль Дюкана!</h1>
               <p class="header__desc">Экспресс-метод похудения от самого известного диетолога в мире!</p>
               <ul class="header-items">
-                <li class="header-items__item"><i class="fa fa-check" aria-hidden="true"></i> <strong>Эффективный</strong> снижение веса </li>
-                <li class="header-items__item"><i class="fa fa-check" aria-hidden="true"></i> <strong>Одна порция</strong> коктейля Дюкана = <strong>один полноценный прием пищи </strong></li>
-                <li class="header-items__item"><i class="fa fa-check" aria-hidden="true"></i> Регуляция процесса <strong>сжигания жировых клеток</strong> в организме </li>
-                <li class="header-items__item"><i class="fa fa-check" aria-hidden="true"></i> <strong>Очистка</strong> кишечника от 2-3 килограмм шлаков <strong/>на первой неделе приема</strong></li>
-                <li class="header-items__item"><i class="fa fa-check" aria-hidden="true"></i> Гарантированное избавление <strong>от 7-12 килограмм за месяц!</strong></li>
+                <li class="header-items__item"><strong>Эффективный</strong> снижение веса </li>
+                <li class="header-items__item"><strong>Одна порция</strong> коктейля Дюкана = <strong>один полноценный прием пищи </strong></li>
+                <li class="header-items__item">Регуляция процесса <strong>сжигания жировых клеток</strong> в организме </li>
+                <li class="header-items__item"><strong>Очистка</strong> кишечника от 2-3 килограмм шлаков <strong>на первой неделе приема</strong></li>
+                <li class="header-items__item">Гарантированное избавление <br><strong>от 7-12 килограмм за месяц!</strong></li>
               </ul>
             </div>
             <div class="col-50 col-right">
-              <div class="header-center"><img src="./img/banka-min.png" alt="duran"><a class="open-form popup-with-form" href="#callback"><i class="fa fa-search" aria-hidden="true"></i>	</a></div>
+              <div class="header-center"><img src="./img/banka-min.png" alt="duran"><a class="open-form popup-with-form" href="#certificate"></a></div>
               <form class="callback">
                 <div class="callback__date">
-                  <p>До <span>03.10.17</span>скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i></p>
+                  <p>До <span>03.10.17 </span>скидка 50% + <img src="../img/gift.png" alt=""></p>
                 </div>
                 <div class="callback__price">
                   <div class="price-left">Цена:</div>
                   <div class="price-right">
-                    <strike class="price__old">1980</strike>
+                    <s class="price__old">1980</s>
                     <p class="price__new">990</p>
                     <p class="price__currency">бел. руб.</p>
                   </div>
@@ -588,7 +590,7 @@
                 <div class="callback__input">
                   <input class="callback__input-name" placeholder="Ваше имя">
                   <input class="callback__input-tel" placeholder="Ваш номер телефона">
-                </div><a class="popup-with-form btn" href="#callback"> <span>Оформить заказ</span><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                </div><a class="popup-with-form btn" href="#callback"> <span>Оформить заказ</span><i> <img src="../img/paper-plane.png" alt=""></i></a>
                 <div class="callback__desc"><span>* Закажи прямо сейчас и получи подарок!	</span></div>
               </form>
             </div>
@@ -604,11 +606,11 @@
         </div>
       </div>
     </header>
-    <form class="form white-popup-block zoom-anim-dialog mfp-hide" id="callback">
+    <form class="white-popup-block zoom-anim-dialog mfp-hide" id="callback">
       <h3>Выберите пакет!</h3>
       <div class="wrap"><span>Пакеты</span><span>Валюта:
           <select>
-            <option select>Тенге</option>
+            <option selected>Тенге</option>
             <option>Рубли</option>
             <option>Доллеры</option>
             <option>Евро</option>
@@ -616,11 +618,10 @@
       <ul class="form__items">
         <li> 
           <label>
-            <input type="radio" name="callback">
+            <input type="radio" name="callback" value="3 или более упаковок">
             <div class="form__img"><img src="../img/section-16-3.png" alt=""></div>
             <div class="form__text">
-              <p>при покупке больше 3 упаковок </p><strong>7 бонусов</strong>
-              <p class="form__open">Показать бонусы ></p>
+              <p>при покупке ⩾ 3 упаковок </p><strong>7 бонусов</strong><span class="form__open">Показать бонусы</span>
             </div>
             <div class="form__price">
               <div class="price_new"> <strong> 2970</strong></div>
@@ -628,15 +629,19 @@
                 <del>5960</del>
               </div>
             </div>
+            <ul class="block__text">
+              <li>Шейкер для смешивания коктейля</li>
+              <li>Мерную ложечку на одну порцию</li>
+              <li>Карту снижения веса, где можно фиксировать свои изменения</li>
+            </ul>
           </label>
         </li>
         <li> 
           <label>
-            <input type="radio" name="callback">
+            <input type="radio" name="callback" value="2 упаковки">
             <div class="form__img"><img src="../img/section-16-2.png" alt=""></div>
             <div class="form__text">
-              <p>при покупке больше 2 упаковок </p><strong>5 бонусов</strong>
-              <p class="form__open">Показать бонусы ></p>
+              <p>при покупке 2 упаковок </p><strong>5 бонусов</strong><span class="form__open">Показать бонусы</span>
             </div>
             <div class="form__price">
               <div class="price_new"> <strong> 1980</strong></div>
@@ -644,15 +649,21 @@
                 <del>3960</del>
               </div>
             </div>
+            <ul class="block__text">
+              <li>Шейкер для смешивания коктейля</li>
+              <li>Мерную ложечку на одну порцию</li>
+              <li>Карту снижения веса, где можно фиксировать свои изменения</li>
+              <li>Силиконовый коврик для диетической кухни </li>
+              <li>Карту рациона со списком СТОП - продуктов </li>
+            </ul>
           </label>
         </li>
         <li> 
           <label>
-            <input type="radio" name="callback">
+            <input type="radio" name="callback" value="1 упаковка">
             <div class="form__img"><img src="../img/section-16-1.png" alt=""></div>
             <div class="form__text">
-              <p>при покупке больше 1 упаковоки</p><strong>3 бонуса</strong>
-              <p class="form__open">Показать бонусы ></p>
+              <p>при покупке 1 упаковоки</p><strong>3 бонуса</strong><span class="form__open">Показать бонусы</span>
             </div>
             <div class="form__price">
               <div class="price_new"> <strong> 990</strong></div>
@@ -660,11 +671,20 @@
                 <del>1980</del>
               </div>
             </div>
+            <ul class="block__text">
+              <li>Шейкер для смешивания коктейля</li>
+              <li>Мерную ложечку на одну порцию</li>
+              <li>Карту снижения веса, где можно фиксировать свои изменения</li>
+              <li>Силиконовый коврик для диетической кухни </li>
+              <li>Карту рациона со списком СТОП - продуктов </li>
+              <li>350 рецептов диеты Дюкан» – PDF (доступно для скачивания сразу после оформления заказа)</li>
+              <li>«Я не умею худеть» Пьер Дюкан – PDF (доступно для скачивания сразу после оформления заказа)</li>
+            </ul>
           </label>
         </li>
       </ul>
       <div class="wrap">
-        <button class="btn" type="sybmit">Подтвердить</button>
+        <button class="btn">Подтвердить</button>
       </div>
     </form>
     <form class="form white-popup-block zoom-anim-dialog mfp-hide" id="form1">
@@ -674,16 +694,76 @@
           <h3>Хлорелла</h3>
           <div class="inner-text"> 
             <p>Водоросль, в которой очень много белка, и как все белковые продукты она является термогенной пищей, необходимой для похудения. Хлорелла заставляет организм вырабатывать больше тепла, а чем больше организм вырабатывает тепла, тем быстрее он расходует калории и жировые отложения. Также хлорелла обладает уникальным </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dignissimos optio fugit possimus praesentium iure odio inventore. Doloribus praesentium adipisci illo veritatis deleniti odio perspiciatis, necessitatibus neque nam unde facere.</p>
           </div>
         </div>
       </div>
     </form>
     <form class="form white-popup-block zoom-anim-dialog mfp-hide" id="form2">
+      <div class="wrap">
+        <div class="form__img"><img src="../img/form1.png" alt=""></div>
+        <div class="form__text">
+          <h3>Чапра имбиря</h3>
+          <div class="inner-text"> 
+            <p>концентрированная экстракция микроэлементов, ускоряющих обмен веществ в организме. Имбирная чапра богата витаминами группы В, А и С, а также цинком, железом, магнием, фосфором и другими соединениями, необходимыми в организме. </p>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form class="form white-popup-block zoom-anim-dialog mfp-hide" id="form3">
+      <div class="wrap">
+        <div class="form__img"><img src="../img/form1.png" alt=""></div>
+        <div class="form__text">
+          <h3>Спирулина </h3>
+          <div class="inner-text"> 
+            <p>водоросль, способная выводить тяжелые металлы из организма, нормализовать обменные процессы и восстановить метаболизм в организме. Снижает чувство голода, поскольку также обладает большим количеством белка. </p>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form class="form white-popup-block zoom-anim-dialog mfp-hide" id="form4">
+      <div class="wrap">
+        <div class="form__img"><img src="../img/form1.png" alt=""></div>
+        <div class="form__text">
+          <h3>Выжимка из плодов шиповника </h3>
+          <div class="inner-text"> 
+            <p>богата микроэлементами и витамином С, необходимым для поддержания иммунитета, особенно на фоне снижения веса. Витамин С нужен для поддержания сосудов в тонусе, а также для того, чтобы вы не чувствовали слабость во время потери веса. </p>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form class="form white-popup-block zoom-anim-dialog mfp-hide" id="form5">
+      <div class="wrap">
+        <div class="form__img"><img src="../img/form1.png" alt=""></div>
+        <div class="form__text">
+          <h3>Ламинария </h3>
+          <div class="inner-text"> 
+            <p>водоросль, которая придает организму молодость и красоту. В ней содержатся аминокислоты, витамины В1, В6, В9, В12, Витамин С, каротин, биотин и другие вещества, ускоряющие регенерацию клеток. А также минералы - калий и йод, обновляющие организм, восстанавливающие обмен веществ и укрепляющие иммунитет. </p>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form class="form white-popup-block zoom-anim-dialog mfp-hide" id="form6">
+      <div class="wrap">
+        <div class="form__img"><img src="../img/form1.png" alt=""></div>
+        <div class="form__text">
+          <h3>Клетчатка  </h3>
+          <div class="inner-text"> 
+            <p>во время похудения клетчатка - один из самых важных элементов в питании. Обладает отрицательной калорийностью, помогает вычистить кишечник от токсинов и шлаков, нормализует пищеварение и действует как полезный и питательный “скраб изнутри”.</p>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form class="white-popup-block zoom-anim-dialog mfp-hide" id="certificate">
       <h3>Средсто для похудения признанное большинством!</h3>
       <p>Коктейль для экспресс-похудения от Пьера Дюкана стал победителем в номинации «Программа для снижения и контроля веса №1» премии «Выбор года 2017»</p><img src="../img/form3.png" alt="">
-    </form>
-    <script src="https://use.fontawesome.com/0cc9c94f4c.js"></script>
+    </form><%- footer %>
+<%- yandex_code %>
+<%- google_code %>
+<%- vk_code %>
+<%- topmail_code %>
+<%- custom_code %>
+<%- popup_code %>
+    <script src="http://disk.hotpartner.biz/js/init.vanilla.js"></script>
     <script src="js/scripts.min.js"></script>
   </body>
 </html>

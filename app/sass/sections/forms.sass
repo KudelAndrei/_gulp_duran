@@ -20,11 +20,14 @@
 		text-transform: uppercase
 		outline: none
 		cursor: pointer
+	.block__text
+		position: relative
 	.form__items
 		li
 			label 
 				position: relative
 				display: flex
+				flex-wrap: wrap
 				justify-content: space-between
 				padding: 15px 15px 15px 20px
 				border-top: 1px solid #e4e4e4
@@ -44,6 +47,7 @@
 						height: 14px
 						border-radius: 50%
 						border: 1px solid #909090
+						z-index: 2
 					&:not(radio) + .form__img::after
 						content: ""
 						position: absolute
@@ -73,11 +77,26 @@
 					strong
 						color: #6ba32f
 					.form__open
+						position: relative
 						margin-top: auto
 						text-transform: uppercase
 						color: #868686
 						font-size: 12px
-				.form__price
+						&::before
+							position: absolute
+							content: ""
+							width: 5px
+							height: 8px
+							background-image: url(../img/arrow-right-min.png)
+							background-position: 0 0
+							background-repeat: no-repeat
+							top: 5px
+							left: 126px
+							transition: left 0.3s
+						&:hover
+							&::before
+								left: 129px
+				.form__price	
 					line-height: 1.4
 					.price__old
 						color: #868686
@@ -85,12 +104,30 @@
 				label
 					border-bottom: 1px solid #e4e4e4
 					margin-bottom: 20px
+	.block__text
+		li
+			&:nth-child(1)
+			background-position: -6px -0px
+			&:nth-child(2)
+				background-position: -6px -60px
+			&:nth-child(3)
+				background-position: -6px -118px
+			&:nth-child(4)
+				background-position: -6px -190px
+			&:nth-child(5)
+				background-position: -6px -262px
+			&:nth-child(6)
+				background-position: -6px -338px
+			&:nth-child(7)
+				background-position: -6px -338px
+			&:last-child
+				border-bottom: none
 	.btn
 		width: 100%
 		padding-right: 0
 		margin-bottom: 0
 
-#form1
+.form
 	max-width: 630px
 	border-radius: 5px
 	font-weight: 300
@@ -112,9 +149,7 @@
 		.inner-text
 			min-width: 200px
 			max-height: 180px
-			overflow-y: scroll
 			line-height: 1.4
-			padding-right: 10px
 
 @media only screen and (max-width : 500px)
 	#form1
@@ -124,7 +159,7 @@
 			flex-wrap: wrap
 
 
-#form2
+#certificate
 	max-width: 340px
 	border-radius: 5px
 	font-weight: 300

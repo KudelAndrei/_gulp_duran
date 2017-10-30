@@ -5,6 +5,32 @@
 	h3
 		font-weight: 300
 		font-size: 20px
+	.btn
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			background-image: url(../img/arrow-right.png)
+			background-position: 0 0
+			width: 20px
+			height: 12px
+			top: 50%
+			transform: translateY(-50%)
+			right: 20px
+			background-repeat: no-repeat
+			transition: all 0.3s
+			z-index: 2
+		&::after
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			width: 60px
+			height: 100%
+			background-color: #6e9834
+		&:hover
+			&::before
+				right: 16px
 	.section-9__block
 		position: relative
 		display: flex
@@ -31,29 +57,12 @@
 				z-index: 10
 				height: 175px
 				margin-bottom: 30px
-			h3
-				margin-bottom: 30px
-				i
-					top: 260px
-				&::before
-					top: 30px
 			h3, h4
 				position: relative
 				border-radius: 20px
 				color: #fff
 				z-index: -1
 				margin-bottom: 25px
-				i
-					width: 16px
-					height: 16px
-					background-color: inherit
-					position: absolute
-					border-radius: 50%
-					font-size: 10px
-					line-height: 15px
-					left: 50%
-					transform: translateX(-50%)
-					text-align: center
 				&::before
 					content: ""
 					position: absolute
@@ -61,6 +70,16 @@
 					height: 240px
 					width: 1px
 					background-color: inherit
+				&::after
+					content: ""
+					position: absolute
+					bottom: -100px
+					left: 50%
+					transform: translateX(-50%)
+					width: 16px
+					height: 17px
+					background-image: url(../img/section-9-check.png)
+					background-position: 0px 0px
 			h4
 				color: #333
 				font-size: 18px
@@ -72,22 +91,28 @@
 					bottom: -90px
 					background-color: #69a52e
 					height: 90px
-				i 
-					bottom: -90px
-					background-color: #69a52e
-					color: #fff
 				&:last-child
 					margin-bottom: 20px
-					&::before, i
+					&::before, &::after
 						display: none
+			h3
+				margin-bottom: 30px
+				&::before
+					top: 30px
+				&::after
+					bottom: -250px
 		.block-left
 			h3
 				background-color: #69a52e
+				&::after
+					background-position: 0 17px
+			h4::after
+				background-position: 0px 17px
 		.block-right
 			h3
 				background-color: #ff0000
 			h4
-				&::before, i
+				&::before
 					background-color: #ff0000
 
 @media only screen and (max-width : 600px)
@@ -115,15 +140,15 @@
 					padding: 3px
 					margin: 3px 3px 20px 3px 
 					&::before
-						height: 200px
-					i
-						top: 220px
+						height: 170px
+					&::after
+						top: 200px
 				h4
 					font-size: 16px
 					line-height: 1.2
 					margin-bottom: 70px
 					&::before
-						bottom: -50px
-						height: 50px
-					i
+						bottom: -40px
+						height: 40px
+					&::after
 						bottom: -50px

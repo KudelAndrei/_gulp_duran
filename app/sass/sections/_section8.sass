@@ -4,8 +4,33 @@
 	background-image: url(../img/section-8.png)
 	background-repeat: no-repeat
 	background-position: left center
-	height: 100vh
-	min-height: 670px
+	min-height: 660px
+	.btn
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			background-image: url(../img/arrow-right.png)
+			background-position: 0 0
+			width: 20px
+			height: 12px
+			top: 50%
+			transform: translateY(-50%)
+			right: 20px
+			background-repeat: no-repeat
+			transition: all 0.3s
+			z-index: 2
+		&::after
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			width: 60px
+			height: 100%
+			background-color: #6e9834
+		&:hover
+			&::before
+				right: 16px
 	.section-8__block
 		max-width: 630px
 		padding: 0 15px

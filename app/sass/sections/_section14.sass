@@ -20,12 +20,15 @@
 		height: 200px
 	&::after
 		background-image: url(../img/section-14-bottom.png)
-		background-size: cover
+		background-size: contain
 		background-repeat: no-repeat
-		bottom: 0
+		background-position: left bottom
 		left: 0
-		width: 100%
-		height: 370px
+		bottom: 0
+		// transform: translateY(-50%)
+		min-width: 50%
+		height: 100%
+		min-height: 380px
 		z-index: 0
 	.section-14__block
 		position: relative
@@ -97,6 +100,9 @@
 			&:nth-child(2n)
 				background-color: #f2f2f2
 	.button
+		display: inline-block
+		color: #333
+		text-decoration: none
 		position: relative
 		z-index: 2
 		background-color: #fff

@@ -32,9 +32,12 @@
 	border-radius: 20px
 	padding: 0 36px 0 15px
 	height: 24px
+	font-weight: 300
 	>p
 		margin: 0
 		line-height: 24px
+	strong
+		font-size: 13px
 	.country__img	
 		top: 0
 		right: 0
@@ -83,10 +86,11 @@
 		left: 0
 		max-width: 100%
 		width: 100%
-		height: 600px
+		height: 100%
 		background-image: url(../img/header-bottom.png)
-		background-size: cover
+		background-size: contain
 		background-repeat: no-repeat
+		background-position: left bottom
 		z-index: 1
 
 .header__head
@@ -107,22 +111,23 @@
 	font-family: "RobotoRegular", sans-serif
 	font-weight: 300
 	font-size: 18px
+	padding-right: 10px
 	.header-items__item
 		margin-bottom: 10px
 		padding-left: 30px
+		line-height: 1.3
+		margin-bottom: 15px
 		position: relative
-		>i
+		&::before
+			content: ""
 			position: absolute
-			color: #fff
-			line-height: 18px
-			text-align: center
-			font-size: 12px
-			top: 8px
 			left: 0
-			background-color: #87ae52
-			width: 18px
-			height: 18px
-			border-radius: 50%
+			top: 4px	
+			width: 20px
+			height: 20px
+			background-image: url(../img/header-check.png)
+			background-repeat: no-repeat
+			background-position: 0 0
 
 .callback
 	position: absolute
@@ -145,6 +150,10 @@
 		margin-bottom: 15px
 		>p
 			margin: 7px
+			line-height: 1.3
+		img
+			max-width: 22px
+			margin-bottom: -4px
 	.callback__price
 		display: flex
 		justify-content: space-between
@@ -182,10 +191,8 @@
 			box-sizing: border-box
 			&.callback__input-name
 				margin-bottom: 15px
-				// box-shadow: 0px 0px 0px 1px #595f6f
 				border: 1px solid #595f6f
 			&.callback__input-tel
-				// box-shadow: 0px 0px 0px 1px #ed145b
 				border: 1px solid #ed145b
 				background-position: 0 -60px
 			&:hover
@@ -213,6 +220,7 @@
 		margin-top: 15px
 	.btn
 		width: 100%
+		background: linear-gradient(to right, #99bc6d , #7b9c3b)
 
 
 .header-center
@@ -230,15 +238,24 @@
 		top: 50%
 		left: 50%
 		transform: translate(-50%, -50%)
-		width: 32px
-		height: 32px
-		line-height: 32px
-		background-color: rgba(#fff, 0.85)
+		width: 36px
+		height: 36px
+		line-height: 36px
+		background-color: rgba(#fff, 0.95)
 		border-radius: 50%
-		box-shadow: 0 10px 20px 0 rgba(#000, .5)
 		cursor: pointer
-		transition: box-shadow 0.3s ease
 		outline: none
+		animation: zoom 2s infinite
+		&::before
+			position: absolute
+			content: ""
+			width: 16px
+			height: 16px
+			background-image: url(../img/search.png)
+			background-position: 0 0
+			background-repeat: no-repeat
+			top: 9px
+			left: 9px
 		&:hover
 			box-shadow: none
 	&::before
@@ -266,14 +283,16 @@
 	display: block
 	cursor: pointer
 	z-index: 12
-	>i
-		transition: transform 0.2s ease
-		font-size: 14px
-		margin-top: 8px
-	&:hover
-		>i
-			transform: translateY(3px)
-
+	&::before
+		content: ""
+		position: absolute
+		top: 16px
+		left: calc(50% - 7px)
+		background-image: url(../img/arrow-bottom-min.png)
+		background-position: 0 0
+		width: 15px 
+		height: 10px
+		animation: scroll 2s infinite linear
 
 .header-message
 	position: absolute
@@ -285,6 +304,10 @@
 	z-index: 11
 	font-size: 12px
 	box-shadow: 0 15px 25px 0 rgba(#000, .15)
+	opacity: 0
+	transform: scale(0)
+	transform-origin: bottom right
+	transition: all 0.3s ease-in-out
 	p
 		margin-top: 0
 		margin-bottom: 5px
@@ -298,16 +321,16 @@
 				color: #ff0000
 			&:nth-child(3)
 				color: #68952e
-	&::after
-		content: "\00D7"
-		position: absolute
-		top: 4px
-		right: 10px
-		opacity: 0
-		font-size: 20px
-		line-height: 1
-		cursor: pointer
-		transition: opacity 0.3s ease
+	// &::after
+	// 	content: "\00D7"
+	// 	position: absolute
+	// 	top: 4px
+	// 	right: 10px
+	// 	opacity: 0
+	// 	font-size: 20px
+	// 	line-height: 1
+	// 	cursor: pointer
+	// 	transition: opacity 0.3s ease
 	&::before
 		content: ""
 		position: absolute
@@ -320,15 +343,42 @@
 	&:hover
 		&::after
 			opacity: 1
+	&.show-js
+		opacity: 1
+		transform: scale(1)
+
+@keyframes zoom
+	0%
+		opacity: 0.7
+		box-shadow: 0 10px 20px 0 rgba(#000, .1)
+	50%
+		opacity: 1
+		box-shadow: 0 10px 20px 0 rgba(#000, .5)
+	100%
+		opacity: 0.7
+		box-shadow: 0 10px 20px 0 rgba(#000, .1)
+
+@keyframes scroll
+	0%
+		top: 16px
+	50%
+		top: 20px
+	100%
+		top: 16px
 
 @media only screen and (max-width : 1370px)
 	.header__head 
-		font-size: 50px
+		font-size: 40px
 	.header__desc
 		margin-bottom: 20px
+	.col-right
+		&::before
+			background-position: right bottom
 	.header-items
 		.header-items__item
 			margin-bottom: 5px
+	.header-message
+		bottom: 20px
 
 @media only screen and (max-width : 1200px)
 	.header
@@ -373,3 +423,8 @@
 		margin: 30px auto
 	.header-bottom
 		bottom: 0	
+
+@media only screen and (max-width : 500px)
+	.callback
+		.callback__date
+			font-size: 15px
