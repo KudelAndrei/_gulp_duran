@@ -12,7 +12,6 @@
 	align-items: center
 	padding-top: 10px
 
-
 .logo
 	width: 70px
 	height: 70px
@@ -65,9 +64,6 @@
 	left: 50%
 	width: 50%
 	background: linear-gradient(45deg, #882b8e, #84c835)
-	// background-image: url(../img/header-right.png)
-	background-size: cover
-	background-position: bottom left
 	height: 100%
 	&::after
 		content: ""
@@ -176,23 +172,26 @@
 			position: relative
 			border-radius: 3px
 			overflow: hidden
-			text-align: center
-			line-height: 42px
 			height: 48px
 			color: #fff
-			// transition: opacity 0.3s ease
+			background-image: url(../img/form-icon.png)
+			background-repeat: no-repeat
+			transition: opacity 0.3s
 			opacity: 0.25
+			color: #333
+			box-sizing: border-box
 			&.callback__input-name
 				margin-bottom: 15px
-				box-shadow: 0px 0px 0px 1px #595f6f
-				span
-					background-color: #595f6f
+				// box-shadow: 0px 0px 0px 1px #595f6f
+				border: 1px solid #595f6f
 			&.callback__input-tel
-				box-shadow: 0px 0px 0px 1px #ed145b
-				span
-					background-color: #ed145b
+				// box-shadow: 0px 0px 0px 1px #ed145b
+				border: 1px solid #ed145b
+				background-position: 0 -60px
 			&:hover
 				opacity: 0.7
+			&:focus
+				opacity: 1
 		span
 			position: absolute
 			width: 50px
@@ -239,6 +238,7 @@
 		box-shadow: 0 10px 20px 0 rgba(#000, .5)
 		cursor: pointer
 		transition: box-shadow 0.3s ease
+		outline: none
 		&:hover
 			box-shadow: none
 	&::before
@@ -298,11 +298,14 @@
 				color: #ff0000
 			&:nth-child(3)
 				color: #68952e
-	.header-message-close
+	&::after
+		content: "\00D7"
 		position: absolute
 		top: 4px
 		right: 10px
 		opacity: 0
+		font-size: 20px
+		line-height: 1
 		cursor: pointer
 		transition: opacity 0.3s ease
 	&::before
@@ -315,7 +318,7 @@
 		border-right: 6px solid #fff
 		z-index: 11
 	&:hover
-		.header-message-close
+		&::after
 			opacity: 1
 
 @media only screen and (max-width : 1370px)

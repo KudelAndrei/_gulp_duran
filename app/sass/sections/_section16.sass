@@ -1,0 +1,110 @@
+.section-16
+	padding: 10px 15px 50px
+	.block-time
+		position: relative
+		max-width: 430px
+		border: 1px solid #68952f
+		background-color: #f0f4ea
+		margin: 0 auto 40px
+		padding: 8px
+		border-radius: 5px
+		display: flex
+		align-items: center
+		color: #68952f
+		font-weight: 300
+		line-height: 1.4
+		&::before
+			content: ""
+			position: absolute
+			top: 8px
+			right: 106px
+			width: 1px 
+			height: calc(100% - 20px)
+			background-color: #68952f
+		.time__text
+			padding-right: 10px
+		.time__time 
+			position: relative
+			display: flex
+			font-size: 36px
+			min-width: 90px
+			font-weight: 300
+			&::before
+				content: ":"
+				position: absolute
+				font-size: 36px
+				top: 0
+				left: 38px
+				color: #68952f
+			.time-min
+				margin-right: 8px
+	.section-16__block
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		flex-wrap: wrap
+		.block__item
+			flex: 1 1 33%
+			margin: 0 10px 30px
+			background-color: #fff
+			box-shadow: 0 15px 25px 0 rgba(#000, .15)
+			max-width: 370px
+			border-radius: 3px
+			min-width: 280px
+			font-weight: 300
+			overflow: hidden
+			padding-top: 20px
+			>img
+				max-width: 100%
+				width: 100%
+			.block__text
+				li
+					position: relative
+					padding: 12px  12px  12px 55px
+					background-image: url(../img/section-16-icons.png)
+					background-repeat: no-repeat
+					background-position: 12px 10px
+					border-bottom: 1px solid #e4e4e4
+					line-height: 1.3
+					&:first-child
+						background-color: #f4f4f4
+						background-image: none
+						padding-left: 15px
+						display: flex
+						justify-content: space-between
+					&:nth-child(3)
+						background-position: 12px -30px
+					&:nth-child(4)
+						background-position: 12px -72px
+					&:nth-child(5)
+						background-position: 12px -129px
+					&:nth-child(6)
+						background-position: 12px -185px
+					&:nth-child(7)
+						background-position: 12px -231px
+					&:nth-child(8)
+						background-position: 12px -231px
+					&:last-child
+						padding: 15px
+						background-image: none
+			.button
+				width: 100%
+				height: 48px
+				border: 1px solid #bdbdbd
+				background-color: transparent
+				cursor: pointer
+				transition: all 0.3s ease
+				border-radius: 2px
+				outline: none
+				&:hover
+					border: 1px solid #68952f
+					color: #68952f
+				&:active
+					background-color: #68952f
+					border: 1px solid #68952f
+					color: #fff
+
+@media only screen and (max-width : 1200px)
+	.section-16
+		.section-16__block
+			justify-content: space-around

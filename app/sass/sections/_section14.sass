@@ -1,0 +1,114 @@
+.section-14
+	position: relative
+	background: linear-gradient(45deg, #882b8e, #84c835)
+	padding: 80px 15px 0
+	text-align: center
+	z-index: 0
+	&::before, &::after
+		content: ""
+		position: absolute
+		background-repeat: no-repeat
+		background-size: contain
+		z-index: 0
+	&::before
+		background-image: url(../img/section-14-top.png)
+		background-size: cover
+		background-repeat: no-repeat
+		top: 0
+		right: 0
+		width: 170px
+		height: 200px
+	&::after
+		background-image: url(../img/section-14-bottom.png)
+		background-size: cover
+		background-repeat: no-repeat
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 370px
+		z-index: 0
+	.section-14__block
+		position: relative
+		background-color: #fff
+		max-width: 630px
+		margin: 0 auto 60px
+		border: 1px solid #f2f2f2
+		border-radius: 3px
+		box-shadow: 0 15px 25px 0 rgba(#000, .15)
+		text-align: left
+		z-index: 2
+		h3
+			text-align: center
+			font-size: 24px
+			line-height: 1
+			font-weight: 700
+			margin: 20px 0
+	.section-14__items
+		li
+			label
+				position: relative
+				display: flex
+				align-items: center
+				padding: 5px 0
+				border-top: 1px solid #f2f2f2
+				border-bottom: 1px solid #f2f2f2
+				width: 100%
+				line-height: 1.3
+				cursor: pointer
+			input
+				margin: 0 18px
+				outlone: none
+				&:not(checkbox)
+					position: absolute
+					opacity: 0
+				&:not(checkbox) + span::before
+					content: ""
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					left: -32px
+					width: 18px
+					height: 18px
+					border-radius: 3px
+					border: 1px solid #d9d9d9
+				&:not(checkbox) + span::after
+					content: ""
+					position: absolute
+					top: 50%
+					transform: translateY(-42%)
+					left: -30px
+					width: 20px
+					height: 20px
+					background-image: url(../img/check.png)
+					background-repeat: no-repeat
+					display: none
+				&:checked + span::after
+					display: block
+				&:checked + span::before
+					border: 1px solid #000
+			span
+				position: relative
+				margin-left: 42px
+				border-left: 1px solid #cecece
+				padding-left: 18px
+				font-weight: 300	
+				display: inline-block
+				flex: 1 1 auto
+			&:nth-child(2n)
+				background-color: #f2f2f2
+	.button
+		position: relative
+		z-index: 2
+		background-color: #fff
+		border-radius: 30px
+		box-shadow: 0 15px 30px 0 rgba(#000, .35)
+		font-size: 18px
+		line-height: 1
+		padding: 15px 30px
+		border: none
+		cursor: pointer
+		transition: box-shadow 0.3s ease
+		outline: none
+		margin-bottom: 40px
+		&:hover
+			box-shadow: none
