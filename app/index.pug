@@ -19,9 +19,6 @@ html(lang='ru')
 		link(rel="stylesheet" href="http://disk.hotpartner.biz/css/init.css")
 
 	body
-
-		<form Style='display:none;'><input type="hidden" id="user_country" value="<%- country_code %>"/></form>
-
 		header.header
 			.container-full
 				.header-top
@@ -49,29 +46,32 @@ html(lang='ru')
 							.header-center
 								img(src="./img/banka-min.png", alt="duran")
 								a(href="#certificate" class="open-form popup-with-form")
-							form.callback
+							form(class="callback" action="/order/" method="post")
+								<input type="hidden" name="order" value="1"/>
+								<input type="hidden" name="cid" value="<%= cid %>"/>
 								.callback__date
 									p До 
 										span 03.10.17 
 										| скидка 50% + 
-										img(src="../img/gift.png", alt="")
+										img(src="./img/gift.png", alt="")
 								.callback__price
 									.price-left
 										| Цена:
 									.price-right
 										s.price__old 1980
-										p.price__new 990
-										p.price__currency бел. руб.
+										p.price__new <span class="tot-amount"></span> 990
+										p.price__currency <span class="init_price-txt"></span> бел. руб.
 								.callback__input
-										input(placeholder="Ваше имя").callback__input-name
-										input(placeholder="Ваш номер телефона").callback__input-tel
-								a(href="#callback" class="popup-with-form btn") 
+										input(type="text" name="name" required placeholder="Ваше имя").callback__input-name
+										input(type="tel" name="telephone" pattern=".{7,20}" required title="Более 7 символов"  placeholder="Номер телефона").callback__input-tel
+								button(type="submit" class="btn") 
 									span Оформить заказ
 									i 
-										img(src="../img/paper-plane.png", alt="")
+										img(src="./img/paper-plane.png", alt="")
 								.callback__desc
 									span * Закажи прямо сейчас и получи подарок!	
 			.header-message
+				.header-message-close
 				p «Я НЕ УМЕЮ ХУДЕТЬ, НО С КОКТЕЙЛЕМ ДЮКАНА ПОЛУЧИЛОСЬ!»
 				.header-message_wrap
 					.col
@@ -128,37 +128,41 @@ html(lang='ru')
 							.header-center
 								img(src="./img/banka-min.png", alt="duran")
 								a(href="#certificate" class="open-form popup-with-form")
-							form.callback
+							form(class="callback" action="/order/" method="post")
+								<input type="hidden" name="order" value="1"/>
+								<input type="hidden" name="cid" value="<%= cid %>"/>
 								.callback__date
 									p До 
 										span 03.10.17 
-										| скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i>
+										| скидка 50% + 
+										img(src="./img/gift.png", alt="")
 								.callback__price
 									.price-left
 										| Цена:
 									.price-right
-										s.price__old 1980
-										p.price__new 990
-										p.price__currency бел. руб.
+										s.price__old <span class="old-amount"></span> 1980
+										p.price__new <span class="tot-amount"></span> 990
+										p.price__currency <span class="init_price-txt"></span> бел. руб.
 								.callback__input
-									input(placeholder="Ваше имя").callback__input-name
-									input(placeholder="Ваш номер телефона").callback__input-tel
-								a(href="#callback" class="popup-with-form btn") 
+									input(type="text" name="name" required placeholder="Ваше имя").callback__input-name
+									input(type="tel" name="telephone" pattern=".{7,20}" required title="Более 7 символов"  placeholder="Номер телефона").callback__input-tel
+								button(type="submit" class="btn")  
 									span Оформить заказ
 									i 
-										img(src="../img/paper-plane.png", alt="")
+										img(src="./img/paper-plane.png", alt="")
 								.callback__desc
 									span * Закажи прямо сейчас и получи подарок!	
 			.header-message
-				p «Я НЕ УМЕЮ ХУДЕТЬ, НО С КОКТЕЙЛЕМ ДЮКАНА ПОЛУЧИЛОСЬ!»
+				.header-message-close
+				p “МНЕ КАЗАЛОСЬ, ЧТО ВЕС УХОДИТ С КАЖДЫМ ВЗДОХОМ! ТАК БЫСТРО И ПРОСТО”
 				.header-message_wrap
 					.col
-						strong Виктория, 
-						| 44 года
+						strong Анастасия, 
+						| 28 лет
 					.col
-						| Вес до: 137 кг.
+						| вес до: 98 кг. 
 					.col
-						| Вес после: 78 кг.
+						| вес после: 67 кг.
 			a.header-bottom(href="#section3")
 
 		section.section.section-3#section3
@@ -206,37 +210,42 @@ html(lang='ru')
 							.header-center
 								img(src="./img/banka-min.png", alt="duran")
 								a(href="#certificate" class="open-form popup-with-form")
-							form.callback
+							form(class="callback" action="/order/" method="post")
+								<input type="hidden" name="order" value="1"/>
+								<input type="hidden" name="cid" value="<%= cid %>"/>
+
 								.callback__date
 									p До 
 										span 03.10.17 
-										| скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i>
+										| скидка 50% + 
+										img(src="./img/gift.png", alt="")
 								.callback__price
 									.price-left
 										| Цена:
 									.price-right
-										s.price__old 1980
-										p.price__new 990
-										p.price__currency бел. руб.
+										s.price__old <span class="old-amount"></span> 1980
+										p.price__new <span class="tot-amount"></span> 990
+										p.price__currency <span class="init_price-txt"></span> бел. руб.
 								.callback__input
-									input(placeholder="Ваше имя").callback__input-name
-									input(placeholder="Ваш номер телефона").callback__input-tel
-								a(href="#callback" class="popup-with-form btn")
+									input(type="text" name="name" required placeholder="Ваше имя").callback__input-name
+									input(type="tel" name="telephone" pattern=".{7,20}" required title="Более 7 символов"  placeholder="Номер телефона").callback__input-tel
+								button(type="submit" class="btn") 
 									span Оформить заказ
 									i 
-										img(src="../img/paper-plane.png", alt="")
+										img(src="./img/paper-plane.png", alt="")
 								.callback__desc
 									span * Закажи прямо сейчас и получи подарок!	
 			.header-message
-				p «Я НЕ УМЕЮ ХУДЕТЬ, НО С КОКТЕЙЛЕМ ДЮКАНА ПОЛУЧИЛОСЬ!»
+				.header-message-close
+				p “Я НЕ ПОЧУВСТВОВАЛА НИКАКОГО СТРЕССА ДЛЯ ОРГАНИЗМА!” 
 				.header-message_wrap
 					.col
-						strong Виктория, 
-						| 44 года
+						strong Марина, 
+						| 33 года 
 					.col
-						| Вес до: 137 кг.
+						| вес до: 103 кг. 
 					.col
-						| Вес после: 78 кг.
+						| вес после: 77 кг.
 			a.header-bottom(href="#section7")
 
 		
@@ -292,11 +301,11 @@ html(lang='ru')
 			h3 В составе Коктейля Дюкана только натуральные ингредиенты, добытые со дна моря и с органически чистых плантаций. 
 			.section-10__block
 				.block__item
-					img(src="../img/section-10-1.png", alt="")
+					img(src="./img/section-10-1.png", alt="")
 				.block__item
-					img(src="../img/section-10-2.png", alt="")
+					img(src="./img/section-10-2.png", alt="")
 				.block__item
-					img(src="../img/section-10-3.png", alt="")
+					img(src="./img/section-10-3.png", alt="")
 
 		section.section.section-11
 			h2 <strong> Как похудеть </strong> с коктейлем дюкана?
@@ -333,37 +342,41 @@ html(lang='ru')
 							.header-center
 								img(src="./img/banka-min.png", alt="duran")
 								a(href="#certificate" class="open-form popup-with-form")
-							form.callback
+							form(class="callback" action="/order/" method="post")
+								<input type="hidden" name="order" value="1"/>
+								<input type="hidden" name="cid" value="<%= cid %>"/>
 								.callback__date
 									p До 
 										span 03.10.17 
-										| скидка 50% + <i class="fa fa-gift" aria-hidden="true"></i>
+										| скидка 50% + 
+										img(src="./img/gift.png", alt="")
 								.callback__price
 									.price-left
 										| Цена:
 									.price-right
-										s.price__old 1980
-										p.price__new 990
-										p.price__currency бел. руб.
+										s.price__old <span class="old-amount"></span> 1980
+										p.price__new <span class="tot-amount"></span> 990
+										p.price__currency <span class="init_price-txt"></span> бел. руб.
 								.callback__input
-									input(placeholder="Ваше имя").callback__input-name
-									input(placeholder="Ваш номер телефона").callback__input-tel
-								a(href="#callback" class="popup-with-form btn") 
+									input(type="text" name="name" required placeholder="Ваше имя").callback__input-name
+									input(type="tel" name="telephone" pattern=".{7,20}" required title="Более 7 символов"  placeholder="Номер телефона").callback__input-tel
+								button(type="submit" class="btn") 
 									span Оформить заказ
 									i 
-										img(src="../img/paper-plane.png", alt="")
+										img(src="./img/paper-plane.png", alt="")
 								.callback__desc
 									span * Закажи прямо сейчас и получи подарок!	
 			.header-message
-				p «Я НЕ УМЕЮ ХУДЕТЬ, НО С КОКТЕЙЛЕМ ДЮКАНА ПОЛУЧИЛОСЬ!»
+				.header-message-close
+				p “САМЫЙ ПРОСТОЙ СПОСОБ ПОХУДЕТЬ. Я НЕ ОЖИДАЛ” 
 				.header-message_wrap
 					.col
-						strong Виктория, 
-						| 44 года
+						strong Константин, 
+						| 30 лет
 					.col
-						| Вес до: 137 кг.
+						| вес до: 122 кг.
 					.col
-						| Вес после: 78 кг.
+						| вес после 95 кг.
 			a.header-bottom(href="#section13")
 
 
@@ -386,22 +399,22 @@ html(lang='ru')
 						.owl-left(style="background-image: url('./img/section-13.png')")
 						.owl-right
 							.owl-wrap
-									h3 Виктория Т., 34 года 
-									p Принимала Коктейль Дюкана 1.5 месяца <span>Потеряла 16 кг.</span>
+									h3 Александр Б. 48 лет
+									p Принимал Коктейль Дюкана 2 месяца <span>Потерял 19 кг.</span>
 							.owl-text
-								p «Я располнела после родов, и никак не могла похудеть! Перепробовала кучу способов. На диете особо не посидишь с ребенком. Надо готовить на себя и на него отдельно, а у мамы на такое времени нет. Таблетки пробовала тоже…
-								p У меня от них началась рвота и я вообще думала отравлюсь. Бросила на третий день. Но тут подруга посоветовала мне Дюкана. Я сперва думала диету, собиралась сказать ей что я не могу на таких диетах сидеть. Но нет! Это оказался очень удобный коктейль, который я по утрам пила, вместо завтрака.
-								p И О ЧУДО! Я стала сбрасывать вес! В день уходило примерно по 400-500 гр. Хорошая динамика и безопасно для здоровья! В итоге, пропила так полтора месяца, и приостановила, потому что похудела до своего идеального веса!»
+								p У меня сидячая работа. С ней я потолстел за год на 22 кило! Стало хуже со спиной, с суставами. Жена сказала, что надо худеть. Я пытался, кушал вареную еду отвратную. Но на работе перебивался перекусами, и в итоге ничего. Полгода сидел на диетах, ходил в зал - никакого результата. Но жена принесла Коктейль Дюкана.
+								p Я сперва скептически отнесся, ерунда какая-то. Начал пить вместо завтрака, решил попробовать, как мне будет с ним. В первый день особо ничего не почувствовал, второй тоже. Энергии прибавилось только, удивился что перестал уставать после работы. Через неделю, как надевал брюки, пришлось пробивать дырочку в ремне! И тогда я понял, что коктейль работает!
+								p Пропил два месяца, и в итоге сбросил лишних 19 кг! Спасибо Коктейлю Дюкана! 
 					.section-13__item 
 						.owl-left(style="background-image: url('./img/section-13.png')")
 						.owl-right
 							.owl-wrap
-									h3 Виктория Т., 34 года 
-									p Принимала Коктейль Дюкана 1.5 месяца <span>Потеряла 16 кг.</span>
+									h3 Екатерина В. 26 лет. 
+									p Принимала Коктейль Дюкана 1.8 месяцев <span>Потеряла 21 кг.</span>
 							.owl-text
-								p «Я располнела после родов, и никак не могла похудеть! Перепробовала кучу способов. На диете особо не посидишь с ребенком. Надо готовить на себя и на него отдельно, а у мамы на такое времени нет. Таблетки пробовала тоже…
-								p У меня от них началась рвота и я вообще думала отравлюсь. Бросила на третий день. Но тут подруга посоветовала мне Дюкана. Я сперва думала диету, собиралась сказать ей что я не могу на таких диетах сидеть. Но нет! Это оказался очень удобный коктейль, который я по утрам пила, вместо завтрака.
-								p И О ЧУДО! Я стала сбрасывать вес! В день уходило примерно по 400-500 гр. Хорошая динамика и безопасно для здоровья! В итоге, пропила так полтора месяца, и приостановила, потому что похудела до своего идеального веса!»
+								p Я начала полнеть после 12 лет. У меня нарушился обмен веществ, и я стала быстро набирать вес. К 20 годам я уже весила 101 кг. И это сказалось на здоровье! 
+								p Появилась аритмия, и врачи запретили мне заниматься спортом, хотя я пыталась худеть в зале. Безвыходное положение. Так и прожила толстой до 26 лет, пока мама мне не принесла Коктейль Дюкана. Я просто заменила им завтрак, и начала сбрасывать вес так быстро, как никогда до этого! В неделю уходило по 4-5 килограммов!
+								p И это так легко все далось, что я не верила своим весам! В итоге пока приостановила пить коктейль, решила сделать перерыв, чтобы потом еще раз очиститься и еще на 20 килограммов похудеть! 
 
 		section.section.section-14
 			.section-14__block
@@ -490,13 +503,20 @@ html(lang='ru')
 				.block-time
 					.time__text Если вы сделаете заказ прямо сейчас,
 						strong то получите 7 бонусов в комплекте!
-					.time__time 
-						span.time-min 04
-						span.time-sec 59
+					.timer-box
+						.time__time.timer-hour
+							span.time-min.timer-txt 00
+							.timer-num.timer-hour_num
+						.time__time.timer-minutes 
+							span.time-min.timer-txt 04
+							.timer-num.timer-minutes_num
+						.time__time.timer-seconds
+							span.time-sec.timer-txt 59
+							.timer-num.timer-seconds_num
 
 				.section-16__block
 					.block__item
-						img(src="../img/section-16-1.png", alt="")
+						img(src="./img/section-16-1.png", alt="")
 						ul.block__text
 							li(class='block__text-first') при покупке 1 упаковки: 
 								strong 3 бонуса
@@ -505,12 +525,12 @@ html(lang='ru')
 							li Карту снижения веса, где можно фиксировать свои изменения
 							li(class="block__text-last")
 								label.button
-									input(type="radio" name="callback" value="1 упаковка")
+									input(type="radio" name="callback" value="one")
 									span Выбрать пакет
 										span.checked__text Пакет Выбран
 
 					.block__item
-						img(src="../img/section-16-2.png", alt="")
+						img(src="./img/section-16-2.png", alt="")
 						ul.block__text
 							li(class='block__text-first') при покупке 2 упаковки: 
 								strong 5 бонусов
@@ -521,13 +541,13 @@ html(lang='ru')
 							li Карту рациона со списком СТОП - продуктов 
 							li(class="block__text-last")
 								label.button
-									input(type="radio" name="callback" value="2 упаковки")
+									input(type="radio" name="callback" value="two")
 									span Выбрать пакет
 										span.checked__text Пакет Выбран
 					.block__item
-						img(src="../img/section-16-3.png", alt="")
+						img(src="./img/section-16-3.png", alt="")
 						ul.block__text
-							li(class='block__text-first') при покупке 3 упаковки: 
+							li(class='block__text-first') при покупке  ⩾ 3 упаковки: 
 								strong 7 бонусов
 							li Шейкер для смешивания коктейля
 							li Мерную ложечку на одну порцию
@@ -538,7 +558,7 @@ html(lang='ru')
 							li «Я не умею худеть» Пьер Дюкан – PDF (доступно для скачивания сразу после оформления заказа)
 							li(class="block__text-last")
 								label.button
-									input(type="radio" name="callback" value="3 и более упаковок")
+									input(type="radio" name="callback" value="three")
 									span Выбрать пакет
 										span.checked__text Пакет Выбран
 		
@@ -548,7 +568,7 @@ html(lang='ru')
 					.logo
 						img(src="./img/logo.png", alt="duran")
 					.country
-						p Теперь в и <strong>Беларуси!</strong>
+						p Теперь в и <strong>Беларуси</strong>!
 						.country__img
 							img(src="./img/by.png", alt="belarus")
 				.row
@@ -569,29 +589,34 @@ html(lang='ru')
 							.header-center
 								img(src="./img/banka-min.png", alt="duran")
 								a(href="#certificate" class="open-form popup-with-form")
-							form.callback
+
+							form(class="callback" action="/order/" method="post")
+								<input type="hidden" name="order" value="1"/>
+								<input type="hidden" name="cid" value="<%= cid %>"/>
 								.callback__date
 									p До 
 										span 03.10.17 
 										| скидка 50% + 
-										img(src="../img/gift.png", alt="")
+										img(src="./img/gift.png", alt="")
 								.callback__price
 									.price-left
 										| Цена:
 									.price-right
-										s.price__old 1980
-										p.price__new 990
-										p.price__currency бел. руб.
+										s.price__old <span class="old-amount"></span> 1980
+										p.price__new <span class="tot-amount"></span> 990
+										p.price__currency <span class="init_price-txt"></span> бел. руб.
 								.callback__input
-										input(placeholder="Ваше имя").callback__input-name
-										input(placeholder="Ваш номер телефона").callback__input-tel
-								a(href="#callback" class="popup-with-form btn") 
+										input(type="text" name="name" required placeholder="Ваше имя").callback__input-name
+										input(type="tel" name="telephone" pattern=".{7,20}" required title="Более 7 символов"  placeholder="Номер телефона").callback__input-tel
+								//- a(href="#callback" class="popup-with-form btn") 
+								button(type="submit" class="btn")
 									span Оформить заказ
 									i 
-										img(src="../img/paper-plane.png", alt="")
+										img(src="./img/paper-plane.png", alt="")
 								.callback__desc
 									span * Закажи прямо сейчас и получи подарок!	
 			.header-message
+				.header-message-close
 				p «Я НЕ УМЕЮ ХУДЕТЬ, НО С КОКТЕЙЛЕМ ДЮКАНА ПОЛУЧИЛОСЬ!»
 				.header-message_wrap
 					.col
@@ -602,49 +627,44 @@ html(lang='ru')
 					.col
 						| Вес после: 78 кг.
 		
-		form(class="white-popup-block zoom-anim-dialog mfp-hide" id="callback")
+		form(class="white-popup-block zoom-anim-dialog mfp-hide callback-popup" id="callback")
 			h3 Выберите пакет!
 			.wrap
 				span Пакеты
-				span Валюта:
-					select
-						option(selected) Тенге
-						option Рубли
-						option Доллеры
-						option Евро
+				.price__val <span class="init_price-txt"></span> бел руб
 			ul.form__items
 				li 
 					label
-						input(type="radio" name="callback" value="3 или более упаковок") 
+						input(type="radio" name="callback" value="three") 
 						.form__img
-							img(src="../img/section-16-3.png", alt="")
+							img(src="./img/section-16-3.png", alt="")
 						.form__text
 							p при покупке ⩾ 3 упаковок 
 							strong 7 бонусов
 							span.form__open Показать бонусы
 						.form__price
 							.price_new 
-								strong  2970
+								strong <span class="tot-amount"></span>
 							.price__old 
-								del 5960
+								del <span class="old-amount"></span>
 						ul.block__text
 							li Шейкер для смешивания коктейля
 							li Мерную ложечку на одну порцию
 							li Карту снижения веса, где можно фиксировать свои изменения
 				li 
 					label
-						input(type="radio" name="callback" value="2 упаковки") 
+						input(type="radio" name="callback" value="two") 
 						.form__img
-							img(src="../img/section-16-2.png", alt="")
+							img(src="./img/section-16-2.png", alt="")
 						.form__text
 							p при покупке 2 упаковок 
 							strong 5 бонусов
 							span.form__open Показать бонусы
 						.form__price
 							.price_new 
-								strong  1980
+								strong <span class="tot-amount"></span>
 							.price__old 
-								del 3960
+								del <span class="old-amount"></span>
 						ul.block__text
 							li Шейкер для смешивания коктейля
 							li Мерную ложечку на одну порцию
@@ -653,18 +673,18 @@ html(lang='ru')
 							li Карту рациона со списком СТОП - продуктов 
 				li 
 					label
-						input(type="radio" name="callback" value="1 упаковка") 
+						input(type="radio" name="callback" value="one") 
 						.form__img
-							img(src="../img/section-16-1.png", alt="")
+							img(src="./img/section-16-1.png", alt="")
 						.form__text
 							p при покупке 1 упаковоки
 							strong 3 бонуса
 							span.form__open Показать бонусы
 						.form__price
 							.price_new 
-								strong  990
+								strong <span class="tot-amount"></span>
 							.price__old 
-								del 1980
+								del <span class="old-amount"></span>
 						ul.block__text
 							li Шейкер для смешивания коктейля
 							li Мерную ложечку на одну порцию
@@ -674,21 +694,21 @@ html(lang='ru')
 							li 350 рецептов диеты Дюкан» – PDF (доступно для скачивания сразу после оформления заказа)
 							li «Я не умею худеть» Пьер Дюкан – PDF (доступно для скачивания сразу после оформления заказа)
 			.wrap
-				button(class="btn") Подтвердить
+				button(type="submit" class="btn") Подтвердить
 
 		form(class="form white-popup-block zoom-anim-dialog mfp-hide" id="form1")
 			.wrap
 				.form__img
-					img(src="../img/form1.png", alt="")
+					img(src="./img/form1.png", alt="")
 				.form__text
 					h3 Хлорелла
-					.inner-text  
+					.inner-text
 						p Водоросль, в которой очень много белка, и как все белковые продукты она является термогенной пищей, необходимой для похудения. Хлорелла заставляет организм вырабатывать больше тепла, а чем больше организм вырабатывает тепла, тем быстрее он расходует калории и жировые отложения. Также хлорелла обладает уникальным 
 
 		form(class="form white-popup-block zoom-anim-dialog mfp-hide" id="form2")
 			.wrap
 				.form__img
-					img(src="../img/form1.png", alt="")
+					img(src="./img/form1.png", alt="")
 				.form__text
 					h3 Чапра имбиря
 					.inner-text  
@@ -697,7 +717,7 @@ html(lang='ru')
 		form(class="form white-popup-block zoom-anim-dialog mfp-hide" id="form3")
 			.wrap
 				.form__img
-					img(src="../img/form1.png", alt="")
+					img(src="./img/form1.png", alt="")
 				.form__text
 					h3 Спирулина 
 					.inner-text  
@@ -706,7 +726,7 @@ html(lang='ru')
 		form(class="form white-popup-block zoom-anim-dialog mfp-hide" id="form4")
 			.wrap
 				.form__img
-					img(src="../img/form1.png", alt="")
+					img(src="./img/form1.png", alt="")
 				.form__text
 					h3 Выжимка из плодов шиповника 
 					.inner-text  
@@ -715,7 +735,7 @@ html(lang='ru')
 		form(class="form white-popup-block zoom-anim-dialog mfp-hide" id="form5")
 			.wrap
 				.form__img
-					img(src="../img/form1.png", alt="")
+					img(src="./img/form1.png", alt="")
 				.form__text
 					h3 Ламинария 
 					.inner-text  
@@ -724,7 +744,7 @@ html(lang='ru')
 		form(class="form white-popup-block zoom-anim-dialog mfp-hide" id="form6")
 			.wrap
 				.form__img
-					img(src="../img/form1.png", alt="")
+					img(src="./img/form1.png", alt="")
 				.form__text
 					h3 Клетчатка  
 					.inner-text  
@@ -733,15 +753,10 @@ html(lang='ru')
 		form(class="white-popup-block zoom-anim-dialog mfp-hide" id="certificate")
 			h3 Средсто для похудения признанное большинством!
 			p Коктейль для экспресс-похудения от Пьера Дюкана стал победителем в номинации «Программа для снижения и контроля веса №1» премии «Выбор года 2017»
-			img(src="../img/form3.png", alt="")
+			img(src="./img/form3.png", alt="")
 
-		<%- footer %>
-		<%- yandex_code %>
-		<%- google_code %>
-		<%- vk_code %>
-		<%- topmail_code %>
-		<%- custom_code %>
-		<%- popup_code %>
-		
-		script(src="http://disk.hotpartner.biz/js/init.vanilla.js")
+		form(class="white-popup-block zoom-anim-dialog mfp-hide" id="send")
+			h3 Ваша заявка успешно отправлена!
+
+		//- script(src="http://disk.hotpartner.biz/js/init.vanilla.js")
 		script(src="js/scripts.min.js")

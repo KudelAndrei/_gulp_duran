@@ -40,8 +40,7 @@
 					&:not(radio) + .form__img::before
 						content: ""
 						position: absolute
-						top: 50%
-						transform: translateY(-50%)
+						top: 50px
 						left: 7px
 						width: 14px
 						height: 14px
@@ -51,8 +50,7 @@
 					&:not(radio) + .form__img::after
 						content: ""
 						position: absolute
-						top: 50%
-						transform: translateY(-50%)
+						top: 53px
 						left: 10px
 						width: 8px
 						height: 8px
@@ -98,8 +96,12 @@
 								left: 129px
 				.form__price	
 					line-height: 1.4
+					text-align: right
 					.price__old
 						color: #868686
+					.price__val
+						font-size: 12px
+						text-transform: uppercase
 			&:last-child
 				label
 					border-bottom: 1px solid #e4e4e4

@@ -47,6 +47,11 @@
 		width: 24px
 		height: 24px
 		border: 1px solid #353633
+		&::before
+			display: none
+		img
+			&::before
+				display: none
 
 .col-wrap
 	display: flex
@@ -134,12 +139,10 @@
 	top: 50%
 	transform: translate(50%, -50%)
 	background-color: #fff
-	padding: 30px
+	padding: 20px 25px
 	border-radius: 3px
 	max-width: 330px
 	z-index: 10
-	i 
-		font-size: 23px
 	.callback__date
 		border: 1px solid #68952e
 		color: #68952e
@@ -168,7 +171,7 @@
 			text-transform: uppercase
 			.price__new
 				font-weight: 700
-				font-size: 72px
+				font-size: 62px
 				line-height: 1
 				margin: 0
 				color: #68952e
@@ -177,28 +180,36 @@
 	.callback__input
 		margin-bottom: 30px
 		font-family: "Open Sans", sans-serif
-		.callback__input-tel, .callback__input-name
+		.callback__input-tel, .callback__input-name, .country
 			position: relative
 			border-radius: 3px
 			overflow: hidden
 			height: 48px
-			color: #fff
 			background-image: url(../img/form-icon.png)
 			background-repeat: no-repeat
 			transition: opacity 0.3s
 			opacity: 0.25
 			color: #333
 			box-sizing: border-box
-			&.callback__input-name
-				margin-bottom: 15px
-				border: 1px solid #595f6f
-			&.callback__input-tel
-				border: 1px solid #ed145b
-				background-position: 0 -60px
+			box-shadow: none
+			outline: none
+			border: 1px solid #595f6f
 			&:hover
-				opacity: 0.7
+				opacity: .7
 			&:focus
 				opacity: 1
+		.callback__input-name
+			margin-bottom: 15px
+		.callback__input-tel
+			background-position: 0 -60px
+		.country
+			background-position: 0 -121px
+			margin-bottom: 15px
+			background-color: #fff
+			width: 100%
+			cursor: pointer
+			border: 1px solid #595f6f
+			padding-left: 66px
 		span
 			position: absolute
 			width: 50px
@@ -308,6 +319,33 @@
 	transform: scale(0)
 	transform-origin: bottom right
 	transition: all 0.3s ease-in-out
+	transition-delay: 1s
+	.header-message-close
+		position: absolute
+		top: 5px
+		right: 5px
+		width: 20px
+		height: 20px
+		background-color: rgba(#ccc, .2)
+		border-radius: 3px
+		cursor: pointer
+		z-index: 2
+		opacity: .5
+		transition: all 0.3s
+		&::before, &::after
+			content: ""
+			position: absolute
+			width: 100%
+			height: 2px
+			background-color: #333
+			top: 10px
+			left: 0
+		&::before
+			transform: rotate(45deg)
+		&::after
+			transform: rotate(-45deg)
+		&:hover
+			opacity: 1
 	p
 		margin-top: 0
 		margin-bottom: 5px
@@ -321,16 +359,6 @@
 				color: #ff0000
 			&:nth-child(3)
 				color: #68952e
-	// &::after
-	// 	content: "\00D7"
-	// 	position: absolute
-	// 	top: 4px
-	// 	right: 10px
-	// 	opacity: 0
-	// 	font-size: 20px
-	// 	line-height: 1
-	// 	cursor: pointer
-	// 	transition: opacity 0.3s ease
 	&::before
 		content: ""
 		position: absolute
@@ -346,6 +374,8 @@
 	&.show-js
 		opacity: 1
 		transform: scale(1)
+	&.opacity-js
+		opacity: .5
 
 @keyframes zoom
 	0%

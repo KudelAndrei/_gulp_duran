@@ -1,8 +1,8 @@
 .section-7
 	position: relative
 	background-image: url(../img/section-7.png)
-	background-size: cover
-	background-position: 200px top
+	background-size: contain
+	background-position: right top
 	background-repeat: no-repeat
 	color: #fff
 	padding: 30px 15px
@@ -39,6 +39,10 @@
 			&:last-child
 				&::before
 					display: none
+@media only screen and (max-width : 900px)
+	.section-7
+		background-size: cover
+		background-position: 200px top
 
 @media only screen and (max-width : 550px)
 	.section-7

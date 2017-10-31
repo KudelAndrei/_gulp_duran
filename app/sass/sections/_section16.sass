@@ -1,8 +1,11 @@
 .section-16
 	padding: 10px 15px 50px
+	.timer-box
+		display: flex
+		min-width: 150px
 	.block-time
 		position: relative
-		max-width: 430px
+		max-width: 488px
 		border: 1px solid #68952f
 		background-color: #f0f4ea
 		margin: 0 auto 40px
@@ -17,7 +20,7 @@
 			content: ""
 			position: absolute
 			top: 8px
-			right: 106px
+			right: 158px
 			width: 1px 
 			height: calc(100% - 20px)
 			background-color: #68952f
@@ -27,15 +30,19 @@
 			position: relative
 			display: flex
 			font-size: 36px
-			min-width: 90px
 			font-weight: 300
+			margin-right: 4px
 			&::before
 				content: ":"
 				position: absolute
 				font-size: 36px
 				top: 0
-				left: 38px
+				left: 48px
 				color: #68952f
+			&:last-child
+				margin-left: 6px
+				&::before
+					display: none
 			.time-min
 				margin-right: 8px
 	.section-16__block
@@ -47,7 +54,7 @@
 			flex: 1 1 33%
 			margin: 0 10px 30px
 			background-color: #fff
-			box-shadow: 0 15px 25px 0 rgba(#000, .15)
+			box-shadow: 0 5px 25px 0 rgba(#000, .15)
 			max-width: 370px
 			border-radius: 3px
 			min-width: 280px
